@@ -1,0 +1,13 @@
+{
+    "name": "clase-prueba",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Diego Martin Marmol",
+    "license": "MIT",
+    "dependencies": {
+        "live-server": "^1.2.0"
+    },
+    "scripts": {
+        "start": "node ./config/server.js"
+    }
+}
