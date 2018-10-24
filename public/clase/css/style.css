@@ -1,0 +1,167 @@
+* {
+  font-family: "Suez One", "Arial", sans-serif;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+div.caja {
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 15px 10px 15px;
+  /* 
+	padding: 10px 15px;
+	padding-top: 10px;
+	padding-right: 15px;
+	...
+  */
+  margin: 0 auto 50px auto;
+  max-width: 1024px;
+}
+
+div.caja div.caja {
+  border-bottom: none;
+  padding: 15px 20px;
+  background-color: #f3f3f3;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  /* border: 1px solid gray */
+  margin-bottom: 20px;
+  /* margin: 0 auto; */
+}
+
+blockquote {
+  font-style: italic;
+}
+
+img {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 100%;
+  display: block;
+}
+
+.docs {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #7baaf7;
+  padding: 8px 12px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+.docs + .docs {
+  margin-left: 10px;
+}
+
+pre,
+code,
+pre span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+
+h1 code,
+h2 code {
+  font-size: 28px;
+}
+h3 code {
+  font-size: 20px;
+}
+
+/**
+ * Estilos para los ejemplos
+ */
+.example-hover {
+  font-size: 12px;
+}
+.example-hover:hover {
+  font-size: 24px;
+}
+.example-active {
+  background: transparent;
+}
+.example-active:active {
+  color: white;
+  background: red;
+}
+.example-focus {
+  border: none;
+}
+.example-focus:focus {
+  border: 1px solid green;
+}
+
+.example-first-last-child p {
+  background: violet;
+}
+.example-first-last-child p:first-child {
+  background: green;
+}
+.example-first-last-child p:last-child {
+  background: cyan;
+}
+
+.example-first-line-letter .capitular::first-letter {
+  font-size: 24px;
+}
+.example-first-line-letter p.destacado::first-line {
+  color: blue;
+}
+
+/**
+ * Estilos para los ejemplos sobre Tipografias
+ */
+.example-columns p {
+  columns: 3 12px;
+}
+
+.example-align .align-left {
+  text-align: left;
+}
+.example-align .align-right {
+  text-align: right;
+}
+.example-align .align-center {
+  text-align: center;
+}
+.example-align .align-justify {
+  text-align: justify;
+}
+
+/**
+ * Estilos de la libreria prittyprint
+ */
+pre.prettyprint {
+  border: none !important;
+}
+pre.prettyprint code {
+  display: block;
+  padding: 15px;
+  line-height: 1.2em;
+  border-radius: 3px;
+}
+code.language-css {
+  background-color: #383a42;
+}
+code.language-css .pln,
+code.language-css .pun {
+  color: #fff;
+}
+code.language-css .pln:first-of-type,
+code.language-css .lit {
+  color: #e6725e;
+}
+code.language-css .pln + code.language-css .pun {
+  color: #e6725e;
+}
+code.language-css .kwd {
+  color: #7baaf7;
+}
+code.language-css .com {
+  color: #999;
+}

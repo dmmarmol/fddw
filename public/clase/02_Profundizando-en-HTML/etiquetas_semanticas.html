@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>Clase 02 - Etiquetas Semánticas</title>
+</head>
+
+<body>
+    <div class="caja">
+        <a href="index.html">&lt; Volver</a>
+        <h1>Etiquetas Semánticas</h1>
+        <p>
+            Las siguientes etiquetas semánticas son sólo un grupo de etiquetas básicas que cargan
+            de significado a su contenido. Todas han sido incluidas en el estandar HTML5
+        </p>
+    </div>
+
+
+
+
+    <div class="caja">
+        <h2><code>&lt;nav&gt;</code></h2>
+        <p>
+            La etiqueta <code>&lt;nav&gt;</code> sirve para establecer un menú de navegación.
+        </p>
+
+        <h3>Ejemplo</h3>
+        <div class="caja">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="etiquetas_contenedoras.html">Etiquetas contenedoras</a></li>
+                    <li><a href="etiquetas_semanticas.html">Etiquetas semánticas</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/nav" target="_blank">=> Documentación
+            oficial</a>
+    </div>
+
+
+
+    <div class="caja">
+        <h2><code>&lt;article&gt;</code></h2>
+        <p>
+            La etiqueta <code>&lt;article&gt;</code> representa una composición auto-contenida en un documento.
+            Puede ser tanto independiente o reutilizable y debería poder leerse independientemente del resto del sitio.
+        </p>
+
+        <h3>Ejemplo</h3>
+        <div class="caja">
+            <article>
+                <h2>Titulo de una nota</h2>
+                <p>Cuerpo de una nota. Puede ser tanto un párrafo como así varios</p>
+                <p>Aquí otro párrafo más</p>
+            </article>
+        </div>
+
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/article" target="_blank">=> Documentación
+            oficial</a>
+    </div>
+
+    <div class="caja">
+        <h2><code>&lt;section&gt;</code></h2>
+        <p>
+            La etiqueta <code>&lt;section&gt;</code> representa una sección genérica de un documento.
+        </p>
+
+        <h3>Ejemplo</h3>
+        <div class="caja">
+            <section>
+                <h1>Título de una sección</h1>
+                <article>
+                    <h2>Título de un 1er article dentro de una section</h2>
+                    <p>Párrafo dentro de un 1er article dentro de una section</p>
+                </article>
+                <article>
+                    <h2>Título de un 2do article dentro de una section</h2>
+                    <p>Párrafo dentro de un 2do article dentro de una section</p>
+                </article>
+            </section>
+        </div>
+
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/section" target="_blank">=> Documentación
+            oficial</a>
+    </div>
+
+    <div class="caja">
+        <h2><code>&lt;aside&gt;</code></h2>
+        <p>
+            La etiqueta <code>&lt;aside&gt;</code> representa una sección de una página que consiste en contenido que
+            está tangencialmente relacionado con el contenido que le rodea.
+        </p>
+
+        <h3>Ejemplo</h3>
+        <div class="caja">
+            <div>
+                <section>
+                    <article>
+                        <h2>Título de un article dentro de una section</h2>
+                    </article>
+                </section>
+                <aside>
+                    <ul>
+                        <li>Boton #1</li>
+                        <li>Boton #2</li>
+                        <li>Boton #3</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        <blockquote>
+            Es posible incluir &lt;article&gt; dentro de &lt;section&gt; o vice versa?<br />
+            La etiqueta &lt;article&gt; especifica independencia del resto del sitio y es auto-contenida. Por otro
+            lado, la etiqueta &lt;section&gt; define una sección dentro de un documento.<br />
+            No podemos partir de dichas definiciones para establecer "¿Quien viene primero?", por lo tanto, es probable
+            que en internet encontremos muchos casos en donde la herencia este invertida.
+        </blockquote>
+
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/aside" target="_blank">=>
+            Documentación
+            oficial</a>
+
+    </div>
+
+    <div class="caja">
+        <h2><code>&lt;footer&gt;</code></h2>
+        <p>
+            Parecida a la etiqueta <code>&lt;header&gt;</code>, la etiqueta <code>&lt;footer&gt;</code> representa un
+            pie de página para el contenido de sección ancestro (padre) mas cercano.
+        </p>
+
+        <h3>Ejemplo</h3>
+        <div class="caja">
+            <div>
+                <section>
+                    <article>
+                        <h2>Título de un article dentro de una section</h2>
+                    </article>
+                </section>
+                <footer>
+                    <ul>
+                        <li>Boton #1</li>
+                        <li>Boton #2</li>
+                        <li>Boton #3</li>
+                    </ul>
+                </footer>
+            </div>
+        </div>
+
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/footer" target="_blank">=>
+            Documentación
+            oficial</a>
+
+    </div>
+
+</body>
+
+</html>
