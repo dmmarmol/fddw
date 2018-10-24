@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>Clase 03 - Tipografías para la web</title>
+</head>
+
+<body>
+    <div class="caja">
+        <a href="index.html">&lt; Volver</a>
+        <h1>Tipografías para la web</h1>
+        <p>
+            Si bien podemos utilizar las fuentes instaladas en el dispositivo del usuario,
+            también es posible incoporar familias tipográficas personalizadas a nuestro sitio web.
+        </p>
+    </div>
+
+
+
+    <div class="caja">
+        <h2>Selector <code>@font-face</code></h2>
+        <p>
+            <code>@font-face</code> permite al desarrollador especificar fuentes online para visualizar en sus páginas
+            web.
+            Al permitir a los desarrolladores proporcionar sus propias fuentes,
+            <code>@font-face</code> elimina la necesidad de depender de fuentes de usuarios instaladas en sus
+            computadoras.
+        </p>
+
+        <div class="caja">
+            <h4>Sintaxsis</h4>
+            <pre class="prettyprint"><code class="language-css">@font-face {
+    font-family: "Open Sans", "Roboto", "Helvetica", sans-serif;
+    src: '../font/open-sans.ttf'; /** Ruta del archivo de la fuente */
+    /** 
+    * Algunas propiedades opcionales
+    */
+    font-weight: 500; /** Peso tipográfico (500 = regular) */
+    font-style: normal; /** Estilo (variable) */
+}</code></pre>
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/@font-face" target="_blank">
+                Ver Documentación
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="caja">
+        <h2>Columnas tipográficas</h2>
+        <p>
+            Gracias a CSS3, es posible dividir el contenido en Columnas
+            sin necesidad de generar más HTML
+        </p>
+
+        <div class="caja">
+            <h4>Sintaxsis</h4>
+            <pre class="prettyprint"><code class="language-css">.columns {
+    columns: 3 12px; /** Version Corta */
+    columns-count: 3; /** Cantidad de columnas */
+    columns-gap: 3; /** Cantidad de columnas */    
+}</code></pre>
+            <div class="example-columns">
+                <p>
+                    Egestas neque lectus dis leo nisi pulvinar a eros condimentum accumsan magna adipiscing proin etiam
+                    conubia porta himenaeos a magnis mus bibendum dis platea vestibulum sociis venenatis. A odio
+                    suspendisse libero risus mauris tortor vivamus a id eget parturient a congue urna fusce nascetur
+                    scelerisque cum vestibulum iaculis condimentum hendrerit nunc scelerisque tempor velit dictumst
+                    hac.</p>
+
+                <p>
+                    Sem a vestibulum adipiscing posuere adipiscing nisi adipiscing suspendisse aliquam venenatis
+                    placerat at molestie blandit scelerisque blandit malesuada viverra suspendisse quis nec. A
+                    ullamcorper est faucibus bibendum condimentum nec sem adipiscing dui accumsan ac parturient a ac
+                    imperdiet.
+                </p>
+                <p>
+                    Luctus tellus curabitur cum cum ridiculus natoque scelerisque in mus faucibus a a a hac sociosqu
+                    parturient scelerisque scelerisque morbi scelerisque scelerisque luctus dapibus vehicula dis
+                    fringilla.
+                </p>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns" target="_blank">
+                Ver Documentación
+            </a>
+        </div>
+    </div>
+
+
+
+    <div class="caja">
+        <h2>Alineación tipográfica</h2>
+        <p>
+            Al igual que en una pieza editorial, podemos alinear el texto hacia un eje,
+            centrarlo o justificarlo
+        </p>
+
+        <div class="caja">
+            <h4>Sintaxsis</h4>
+            <pre class="prettyprint"><code class="language-css">.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }
+.align-justify { text-align: justify; }
+</code></pre>
+            <div class="example-align">
+                <p class="align-left">
+                    Egestas neque lectus dis leo nisi pulvinar a eros condimentum accumsan magna adipiscing proin etiam
+                    conubia porta himenaeos a magnis mus bibendum dis platea vestibulum sociis venenatis. A odio
+                    suspendisse libero risus mauris tortor vivamus a id eget parturient a congue urna fusce nascetur
+                    scelerisque cum vestibulum iaculis condimentum hendrerit nunc scelerisque tempor velit dictumst
+                    hac.</p>
+                <p class="align-right">
+                    Sem a vestibulum adipiscing posuere adipiscing nisi adipiscing suspendisse aliquam venenatis
+                    placerat at molestie blandit scelerisque blandit malesuada viverra suspendisse quis nec. A
+                    ullamcorper est faucibus bibendum condimentum nec sem adipiscing dui accumsan ac parturient a ac
+                    imperdiet.
+                </p>
+                <p class="align-center">
+                    Luctus tellus curabitur cum cum ridiculus natoque scelerisque in mus faucibus a a a hac sociosqu
+                    parturient scelerisque scelerisque morbi scelerisque scelerisque luctus dapibus vehicula dis
+                    fringilla.
+                </p>
+                <p class="align-justify">
+                    Sem a vestibulum adipiscing posuere adipiscing nisi adipiscing suspendisse aliquam venenatis
+                    placerat at molestie blandit scelerisque blandit malesuada viverra suspendisse quis nec. A
+                    ullamcorper est faucibus bibendum condimentum nec sem adipiscing dui accumsan ac parturient a ac
+                    imperdiet.
+                </p>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/columns" target="_blank">
+                Ver Documentación
+            </a>
+        </div>
+    </div>
+
+
+
+
+    <div class="caja">
+        <h2>Más propiedades tipográficas</h2>
+
+        <div class="caja">
+            <h4><code>font-size</code></h4>
+            <p>
+                Afecta el cuerpo tipográfico
+            </p>
+            <pre class="prettyprint"><code class="language-css">p {
+    font-size: 24px;
+}
+</code></pre>
+
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-size" target="_blank">
+                Ver Documentación
+            </a>
+        </div>
+
+        <div class="caja">
+            <h4><code>line-height</code></h4>
+            <p>
+                Afecta el interlineado
+            </p>
+            <pre class="prettyprint"><code class="language-css">p {
+    line-height: 2em;
+}
+</code></pre>
+
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" target="_blank">
+                Ver Documentación
+            </a>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>

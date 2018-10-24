@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <title>Clase 03 - Propiedades de CSS</title>
+</head>
+
+<body>
+    <div class="caja">
+        <a href="index.html">&lt; Volver</a>
+        <h1>Propiedades de CSS</h1>
+        <p>
+            Las siguientes propiedades son sólo un grupo de propiedades comunes
+            pueden verse en la gran mayoria de los sitios web.
+        </p>
+        <a class="docs" href="https://zellwk.com/blog/9-important-css-properties-you-must-know/" target="_blank">
+            Ver Fuente
+        </a>
+    </div>
+
+    <div class="caja">
+        <h2><code>display</code></h2>
+        <p>
+            La propiedad <code>display</code> tiene muchos valores posibles, pero solo 4 son los más utilizados.
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    display: block;
+    display: inline-block;
+    display: inline;
+    display: none;
+}</code></pre>
+
+        <p>
+            <strong>block:</strong> Los elementos del tipo block ocupan todo el espacio disponible y no pueden ser
+            ubicados en la misma linea horizontal que otro elemento del tipo block (excepto que posea la propiedad
+            <strong>float</strong>). Es el valor por default de elementos como los &lt;div&gt;, &lt;p&gt;, &lt;ul&gt; o
+            &lt;section&gt;, entre otros.
+        </p>
+        <p>
+            <strong>inline:</strong> Los elementos del tipo inline pueden ser ubicados en la misma linea horizontal
+            que otro elemento del tipo inline y se ajustan al espacio ocupado por el contenido que poseen.<br />
+            La propiedad <strong>float</strong> no tiene ningún efecto sobre ellos.<br />
+            Es el valor por default de elementos como &lt;a&gt;, &lt;span&gt; o &lt;strong&gt;, entre otros.
+        </p>
+        <p>
+            <strong>inline-block:</strong> Los elementos del tipo inline-block combinan las propiedades de los tipo
+            block e inline block.
+            Es posible determinar medidas de ancho y alto al mismo tiempo que permite tener otros elementos del tipo
+            inline-block e inline en su misma linea horizontal.<br />
+            La propiedad <strong>float</strong> no tiene ningún efecto sobre ellos.
+        </p>
+        <p>
+            <strong>none:</strong> Este valor permite ocultar el elemento dentro del sitio de manera que no solo no
+            será
+            visible sino que tampoco ocupara espacio (al contrario de lo que ocurre con la propiedad <strong>opacity</strong>).
+        </p>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/display" target="_blank">Ver Documentación</a>
+        <img src="images/display-values.jpg" />
+    </div>
+
+    <div class="caja">
+        <h2><code>width & height</code></h2>
+        <p>
+            Las propiedades <strong>width y height</strong> nos permiten establecer las medidas
+            de ancho y alto de un elemento
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    width: 50%;
+    height: 100%;
+}</code></pre>
+
+        <h4>Posibles valores</h4>
+        <ul>
+            <li><strong>px</strong>: Pixels</li>
+            <li><strong>em</strong>: Unidad de medida relativa al valor de la propiedad <strong>font-size</strong></li>
+            <li><strong>rem</strong>: Muy similar a em, pero toma el valor de font-size establecido en la etiqueta
+                <strong>html</strong></li>
+            <li><strong>%</strong>: Porcentajes</li>
+            <li><strong>auto</strong>: automático</li>
+        </ul>
+
+        <p>Existen tambien variantes para ancho/alto maximo/minimo como son:</p>
+        <pre class="prettyprint"><code class="language-css">div {
+    min-width: 300px;
+    max-width: 80%;
+    min-height: 300px;
+    max-height: 100%;
+}</code></pre>
+
+        <a href="https://www.w3schools.com/cssref/css_units.asp" target="_blank">Ver Documentación</a>
+    </div>
+
+    <div class="caja">
+        <h2><code>margin & padding</code></h2>
+        <p>
+            Las propiedades <strong>margin y padding</strong> afectan los espacios
+            por fuera y por dentro de un elemento, respectivamente.
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}</code></pre>
+
+        <p>Originalmente, los margenes/paddings se escriben de la siguiente manera</p>
+        <pre class="prettyprint"><code class="language-css">div {
+    margin-top: 10px; /** Superior */
+    margin-right: 10px; /** Derecha */
+    margin-bottom: 10px; /** Inferior */
+    margin-left: 10px; /** Izquierda */            
+}</code></pre>
+
+        <h4>Abreviación</h4>
+        <p>En ambos casos, pueden escribirse también en su manera corta</p>
+        <pre class="prettyprint"><code class="language-css">div {
+    margin: 10px; /** 10px a todos los ejes */    
+    margin: 10px 20px; /** 10px en eje vertical y 20px en horizontal */
+    margin: 10px 20px 10px 20px; /** Igual al caso anterior */
+}</code></pre>
+
+        <p>Comparten la posibilidad de usar las mismas medidas que width & height</p>
+
+        <h4>Centrado Horizontal</h4>
+        <p>
+            Margenes horizontales con valor <strong>auto</strong> sirven para <strong>centrar contenido</strong>
+            <em>(que posea width/max-width)</em> horizontalmente
+        </p>
+        <pre class="prettyprint"><code class="language-css">div {
+            margin: 0 auto;
+        }</code></pre>
+
+        <img src="images/box-model.jpg" />
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/margin" target="_blank">Ver Documentación:
+            Margin</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/padding" target="_blank">Ver Documentación:
+            Padding</a>
+    </div>
+
+    <div class="caja">
+        <h2><code>border</code></h2>
+        <p>
+            La propiedad <strong>border</strong> afectan los bordes de la caja de un elemento.
+        </p>
+
+        <p>
+            Esta compuesta por 3 tipos de propiedades
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    border-width: 3px; /** Grosor del borde */
+    border-style: solid; /** Estilo del borde (normalmente su valor es 'solid') */
+    border-color: red; /** Color del borde */
+}</code></pre>
+
+
+        <h4>Abreviación</h4>
+        <p>Podemos también redactar esta propiedad en una sola linea</p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    border: 3px solid red;
+}</code></pre>
+
+    </div>
+
+    <div class="caja">
+        <h2><code>float</code></h2>
+        <p>
+            La propiedad <strong>float</strong> en escencia, sirve para acercar el eje mas lejano del elemento
+            afectado
+            junto al eje más cercano del elemento siguiente.<br>
+            En otras palabras, anula el efecto de los elementos del tipo block
+            y permite juntar dos o más elementos en una mísma linea
+        </p>
+
+        <p>
+            Puede llevar 3 tipos de valores
+        </p>
+        <pre class="prettyprint"><code class="language-css">div {
+    /** Empuja el elemento a la izquierda y los siguientes a su lado derecho */
+    float: left; 
+    /** Igual a `left`, pero en sentido opuesto */
+    float: right;
+    /** Remueve cualquier valor anterior de `float` */
+    float: none;
+}</code></pre>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/float" target="_blank">Ver Documentación</a>
+    </div>
+
+    <div class="caja">
+        <h2><code>clear</code></h2>
+        <p>
+            Si bien <code>float</code> puede sernos muy útil, también puede traernos dolores de cabeza.
+            Para evitarlo, hay que "cancelar" los floats y para ello surge la propiedad <code>clear</code>
+        </p>
+
+        <img src="images/float-problems.jpg" />
+
+        <p>
+            La propiedad <code>clear</code> suele aparecer con estos 3 valores
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    clear: left; /** Cancela floats del lado izquierdo del elemento */
+    clear: right; /** Igual a `left`, pero en sentido opuesto */
+    clear: both; /** Cancela floats a ambos lados del elemento */
+}</code></pre>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/clear" target="_blank">Ver Documentación</a>
+    </div>
+
+
+    <div class="caja">
+        <h2><code>background</code></h2>
+        <p>
+            Esta propiedad sirve para editar el fondo de una caja, ya sea como un color, un gradiente o una imagen
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">div {
+    background: red; /** valor por nombre */
+    background: #F00; /** valor hexadecimal abreviado */
+    background: #FF0000; /** valor hexadecimal completo */
+    background: rgb(255, 0, 0); /** valor rgb */
+    background: rgba(255, 0, 0, 0.5); /** valor rgb + transparencia */
+    /** ruta hacia una imagen relativa al archivo .css */
+    background: url('images/imagen.jpg'); 
+}</code></pre>
+
+        <p>
+            Los ejemplos anteriores de <code>brackground</code> utilizan su sintáxis corta.
+            La manera más detallada de escribirlas sería:
+        </p>
+        <pre class="prettyprint"><code class="language-css">div {
+    background-color: #F00;
+    background-image: url('images/imagen.jpg');
+}</code></pre>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/background" target="_blank">
+            Ver Documentación
+        </a>
+    </div>
+
+
+    <div class="caja">
+        <h2><code>color</code></h2>
+        <p>
+            La propiedad <code>color</code> sirve para cambiar el color de texto
+        </p>
+
+        <pre class="prettyprint"><code class="language-css">p {
+    color: green; /** valor por nombre */    
+}</code></pre>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/color" target="_blank">Ver Documentación</a>
+    </div>
+
+
+    <div class="caja">
+        <h2><code>font</code></h2>
+        <p>
+            La propiedad <code>font</code> afecta la apariencia del texto en un sitio web
+        </p>
+
+        <h4>Abreviación</h4>
+        <pre class="prettyprint"><code class="language-css">p {
+    font: italic 9px/12px "Helvetica", sans-serif;
+}</code></pre>
+
+        <h4>Desgloce</h4>
+        <pre class="prettyprint"><code class="language-css">p {
+    font-family: "Helvetica", sans-serif;
+    font-size: 9px;
+    line-height: 12px;
+    font-style: 9px;
+}</code></pre>
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/font" target="_blank">Ver Documentación</a>
+    </div>
+
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+
+</html>
