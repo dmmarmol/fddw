@@ -1,4 +1,4 @@
-plugins:  
+plugins:
   - jekyll-relative-links
 relative_links:
   enabled: true
@@ -12,4 +12,5 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - PULL_REQUEST_TEMPLATE.md
+  - EXAMPLE.md
 theme: jekyll-theme-minimal
