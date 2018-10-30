@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/prettyprint.theme.css" rel="stylesheet">
+    <link href="../../css/grid.css" rel="stylesheet">
+    <title>Clase 03.02 - Layouts con Flexbox</title>
+
+    <style>
+        .example-01-01 {
+            border-radius: 8px
+        }
+
+        .example-01-02 {
+            border-radius: 50%
+        }
+
+        .example-02-01 {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .example-02-02 {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
+
+        .example-02-02:hover {
+            outline: 3px solid rgba(0, 140, 186, 0.5);
+        }
+
+        .example-03-01 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .example-04-01 {
+            opacity: 0.25;
+        }
+
+        .example-04-02 {
+            opacity: 0.5;
+        }
+
+        .example-04-03 {
+            opacity: 1;
+        }
+
+        .example-05-01 {
+            background-image: url('./images/example02.jpg');
+            background-size: 100%;
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <a href="index.html">&lt; Volver</a>
+        <h1>Imagenes Para la web</h1>
+
+        <h3>Etiqueta <code>&lt;img&gt;</code> y posibilidades</h3>
+        <p>
+            El elemento de imagen HTML <code>&lt;img&gt;</code> representa una imagen en el
+            documento y es una etiqueta que permite cerrarse en sí misma.
+        </p>
+        <p class="note">
+            <strong>Nota:</strong><br>
+            Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es
+            el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con
+            problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es
+            incapaz de mostrarla porque no es válida o soportada. En ese caso, el navegador la
+            reemplazará con el texto definido en el atributo <strong>alt</strong>.
+        </p>
+        <pre class="prettyprint"><code class="language-html">&lt;img src="wrong/path/to/file.jpg" alt="Imagen con cielo azul" /&gt;
+</code></pre>
+
+        <img src="wrong/path/to/file.jpg" alt="Imagen con cielo azul" />
+
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/img" target="_blank">Documentación</a>
+    </div>
+
+
+    <div class="caja">
+        <h3>¿Cómo aplicar estilos a imagenes?</h3>
+
+        <!-- Rounded images -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>Imagenes redondeadas</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-6">
+                    <div class="row">
+                        <div class="column-12">
+                            <img src="./images/example01.jpeg" alt="Paisaje" class="example-01-01" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-12">
+                            <pre class="prettyprint"><code class="language-css">img {
+    border-radius: 8px
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-6">
+                    <div class="row">
+                        <div class="column-12">
+                            <img src="./images/example01.jpeg" alt="Paisaje" class="example-01-02" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-12">
+                            <pre class="prettyprint"><code class="language-css">img {
+    border-radius: 50%
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>Miniatura de imagen</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-6">
+                    <div class="row">
+                        <div class="column-12">
+                            <img src="./images/example01.jpeg" alt="Paisaje" class="example-02-01" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-12">
+                            <pre class="prettyprint"><code class="language-css">img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-6">
+                    <div class="row">
+                        <div class="column-12">
+                            <a>
+                                <img src="./images/example01.jpeg" alt="Paisaje" class="example-02-02" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column-12">
+                            <pre class="prettyprint"><code class="language-css">img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+img:hover {
+    outline: 3px solid rgba(0, 140, 186, 0.5);
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsive images -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>Imagenes responsivas</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <img src="./images/example02.jpg" alt="Paisaje" class="example-03-01" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <pre class="prettyprint"><code class="language-css">img {
+    max-width: 100%;
+    height: auto;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transparent images -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>Imagenes transparentes</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-4">
+                    <img src="./images/example01.jpeg" alt="Paisaje" class="example-04-01" />
+                    <pre class="prettyprint"><code class="language-css">img {
+    opacity: 0.25;
+}</code></pre>
+                </div>
+                <div class="column-4">
+                    <img src="./images/example01.jpeg" alt="Paisaje" class="example-04-02" />
+                    <pre class="prettyprint"><code class="language-css">img {
+    opacity: 0.5;
+}</code></pre>
+                </div>
+                <div class="column-4">
+                    <img src="./images/example01.jpeg" alt="Paisaje" class="example-04-03" />
+                    <pre class="prettyprint"><code class="language-css">img {
+    opacity: 1;
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background images -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>Imagenes de fondo</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <div class="example-05-01">
+                        Texto como contenido
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-6">
+                    <pre class="prettyprint"><code class="language-html">&lt;div class="background-image"&gt;
+    Texto como contenido
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="column-6">
+                    <pre class="prettyprint"><code class="language-css">.background-image {
+    background-image: url('../images/fondo.jpg');
+    background-size: 100%;
+    width: 600px;
+    height: 400px;
+}</code></pre>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
