@@ -136,32 +136,10 @@ h3 code {
 /**
  * Estilos de la libreria prittyprint
  */
-pre.prettyprint {
-  border: none !important;
-}
 pre.prettyprint code {
   display: block;
   padding: 15px;
   line-height: 1.2em;
   border-radius: 3px;
-}
-code.language-css {
-  background-color: #383a42;
-}
-code.language-css .pln,
-code.language-css .pun {
-  color: #fff;
-}
-code.language-css .pln:first-of-type,
-code.language-css .lit {
-  color: #e6725e;
-}
-code.language-css .pln + code.language-css .pun {
-  color: #e6725e;
-}
-code.language-css .kwd {
-  color: #7baaf7;
-}
-code.language-css .com {
-  color: #999;
+  overflow-x: scroll;
 }
