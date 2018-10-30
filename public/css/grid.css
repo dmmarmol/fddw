@@ -1,4 +1,39 @@
+.caja {
+  border-bottom: 1px solid gainsboro;
+  padding: 10px 15px 10px 15px;
+  /* 
+	padding: 10px 15px;
+	padding-top: 10px;
+	padding-right: 15px;
+	...
+  */
+  margin: 0 auto 50px auto;
+  max-width: 1024px;
+}
+
+.caja .caja {
+  border-bottom: none;
+  padding: 15px 20px;
+  background-color: #f3f3f3;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  /* border: 1px solid gray */
+  margin-bottom: 20px;
+  /* margin: 0 auto; */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .flex-container {
+  /* display: flex; */
+}
+.flex-container.caja {
+}
+
+.flex-container .row {
+  margin: 0 -15px;
   display: flex;
   justify-content: space-between;
 }
@@ -6,6 +41,9 @@
 /**
  * Columnas
  */
+[class*="column-"] {
+  padding: 0 15px;
+}
 .column-1 {
   width: 8.3333333333%;
 }
@@ -61,8 +99,12 @@ md (for small laptops - screens equal to or greater than 992px wide)
 lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 */
 @media screen and (max-width: 768px) {
-  .flex-container {
+  .flex-container .row {
     flex-direction: column;
+  }
+  .caja,
+  .caja .caja {
+    margin-bottom: 0;
   }
   [class*="column-"] {
     width: 100%;

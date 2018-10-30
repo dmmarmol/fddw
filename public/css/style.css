@@ -7,32 +7,6 @@ p {
   line-height: 1.4em;
 }
 
-div.caja {
-  border-bottom: 1px solid gainsboro;
-  padding: 10px 15px 10px 15px;
-  /* 
-	padding: 10px 15px;
-	padding-top: 10px;
-	padding-right: 15px;
-	...
-  */
-  margin: 0 auto 50px auto;
-  max-width: 1024px;
-}
-
-div.caja div.caja {
-  border-bottom: none;
-  padding: 15px 20px;
-  background-color: #f3f3f3;
-  border-top: 1px solid gray;
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  /* border: 1px solid gray */
-  margin-bottom: 20px;
-  /* margin: 0 auto; */
-}
-
 blockquote {
   font-style: italic;
 }
@@ -44,7 +18,43 @@ img {
   display: block;
 }
 
-.docs {
+/**
+ * Menu de navegacion
+ */
+.navbar {
+  width: 100%;
+  max-width: 300px;
+}
+.navbar ol {
+  padding: 0;
+}
+.navbar li {
+  margin-bottom: 10px;
+  list-style: none;
+  border-bottom: 1px solid #cbcbcb;
+}
+.navbar a {
+  font-size: 14px;
+  line-height: 1.5em;
+  text-decoration: none;
+  color: #7baaf7;
+  font-weight: 500;
+}
+.navbar a:hover:not([disabled]) {
+  color: #467acc;
+}
+
+/**
+ * Links y Botones
+ */
+a[disabled],
+button[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.docs,
+.back {
   display: inline-block;
   font-size: 12px;
   text-transform: uppercase;
@@ -57,6 +67,13 @@ img {
 .docs + .docs {
   margin-left: 10px;
 }
+.back {
+  background: transparent;
+  color: #7baaf7;
+  font-size: 12px;
+  padding-left: 0;
+  padding-right: 0;
+}
 
 pre,
 code,
@@ -65,12 +82,63 @@ pre span {
   font-size: 16px;
 }
 
+code {
+  background-color: #cbcbcb;
+  color: #222;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.prettyprint code {
+  background-color: inherit;
+  color: inherit;
+  padding: inherit;
+  border-radius: inherit;
+  font-size: inherit;
+}
+
 h1 code,
 h2 code {
   font-size: 28px;
 }
 h3 code {
   font-size: 20px;
+}
+
+/**
+ * Caja
+ */
+.caja ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+.caja li {
+  font-size: 14px;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+.caja li:before {
+  font-family: "Consolas", "Courier", "Courier New", monospace;
+  font-size: 10px;
+  content: ">_ ";
+}
+.caja li code {
+}
+
+/**
+ * Notas
+ */
+.note {
+  background: #fff3d4;
+  border-left: solid 3px #f6b73c;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 1.5em;
 }
 
 /**
@@ -136,10 +204,15 @@ h3 code {
 /**
  * Estilos de la libreria prittyprint
  */
+pre.prettyprint {
+  max-width: 100%;
+}
 pre.prettyprint code {
   display: block;
+  max-width: 100%;
   padding: 15px;
   line-height: 1.2em;
   border-radius: 3px;
-  overflow-x: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
 }

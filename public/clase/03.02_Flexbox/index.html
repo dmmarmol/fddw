@@ -14,11 +14,12 @@
 <body>
 
     <div class="caja">
-        <h1>Clase 03.2 - Fundamentos del diseño web</h1>
+        <h1>Clase 03.02 - Fundamentos del diseño web</h1>
+        <a href="../../../index.html" class="back">Volver</a>
     </div>
 
     <div class="caja">
-        <h2>Sumario: Clase 03.02</h2>
+        <h2>Sumario: Clase 03.02 - Layouts con Flexbox</h2>
         <h3>Layouts con Flexbox</h3>
         <p>
             <strong>Flexbox</strong> <em>(o cajas flexibiles)</em> es una herramienta introducida
@@ -40,73 +41,264 @@
             Propiedades de los padres (contenedores)
         </h3>
 
-        <div class="flex-container">
-            <div class="column-5 caja">
-                <img src="images/01-container.svg" />
+        <!-- Display -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>display</h3>
+                </div>
             </div>
-            <div class="column-7 caja">
-                <pre class="prettyprint"><code class="language-css">.flex-container {
-    background: transparent;
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/01-container.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Esto define a un contenedor como <strong>flex</strong> y afecta a sus hijos
+                        directos. A partir de ahora comenzaran a fluir de izquierda a derecha (por
+                        defecto)</p>
+                    <pre class="prettyprint"><code class="language-css">.flex-container {
+    display: flex;
 }
-p:active {
-    color: white;
-    background: red; /** El fondo pasa de transparente a ser rojo */
-}</code></pre>
+</code></pre>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="caja">
-        <h3>
-            <a href="pseudo_css.html">
-                Pseudo Clases y Pseudo Elementos
-            </a>
-        </h3>
-        <div class="caja">
-            <h4>Pseudo Clases</h4>
-            <ul>
-                <li>:hover</li>
-                <li>:active</li>
-                <li>:focus</li>
-                <li>:first-child</li>
-                <li>:last-child</li>
-            </ul>
-            <h4>Pseudo Elementos</h4>
-            <ul>
-                <li>::first-line</li>
-                <li>::first-letter</li>
-            </ul>
+        <!-- Direction -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>direction</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/02-flex-direction.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Establece el eje principal en el que fluiran los elementos. Los elementos
+                        dentro
+                        de un contenedor flex fluyen siempre en una dirección que puede ser en modo
+                        de
+                        row (fila) o column (columna)</p>
+
+                    <pre class="prettyprint"><code class="language-css">.container {
+    flex-direction: row | row-reverse | column | column-reverse;
+}</code></pre>
+                    <ul>
+                        <li><code>row</code>: <em>(default)</em> elementos fluyen de izquierda
+                            a
+                            derecha</li>
+                        <li><code>row-reverse</code>: elementos fluyen de derecha a izquierda</li>
+                        <li><code>column</code>: igual que row, pero de arriba hacia abajo</li>
+                        <li><code>column-reverse</code>: igual a row-reverse pero de abajo a
+                            arriba</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="caja">
-        <h3>
-            <a href="tipografias_css.html">
-                Tipografías para la Web
-            </a>
-        </h3>
-        <div class="caja">
-            <ul>
-                <li>selector @font-face</li>
-                <li>Google Fonts</li>
-                <li>Icon Fonts</li>
-                <li>Columnas tipográficas</li>
-                <li>Alineación</li>
-                <li>Interlineado</li>
-                <li>Propiedades de texto</li>
-            </ul>
+        <!-- Flex Wrap -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>flex-wrap</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/03-flex-wrap.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Por defecto, todos los elementos flex trataran de adaptarse para permanecer
+                        en
+                        una sola linea. Este comportamiento se puede cambiar a través de la
+                        propiedad
+                        <strong>flex-wrap</strong> permitiendo ajustar como fluyen los elementos</p>
+                    <pre class="prettyprint"><code class="language-css">.flex-container {
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}</code></pre>
+                    <ul>
+                        <li><code>nowrap</code>: <em>(default)</em> todos los elementos flex
+                            estarán en una misma linea</li>
+                        <li><code>wrap</code>: elementos flex se plegaran en multiples lineas
+                            si
+                            superan el ancho de su contenedor</li>
+                        <li><code>wrap-reverse</code>: Igual a wrap pero en lugar de fluir de
+                            izquierda a derecha, lo haran de abajo hacia arriba</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="caja">
-        <h3>
-            <a href="practica/index.html">Actividad Práctica</a>
-        </h3>
-    </div>
+        <!-- Justify Content -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>justify-content</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/04-justify-content.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Esta propiedad define el alineamiento de las cajas en torno al eje
+                        principal. Ayuda a distribuir los elementos para ocupar el espacio libre</p>
+                    <pre class="prettyprint"><code class="language-css">.flex-container {
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+}</code></pre>
+                    <ul>
 
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
-    <script src="../../js/app.js"></script>
+                        <li><code>flex-start</code>: <em>(default)</em> los items se alinean a
+                            partir del eje inicial (definido en <code>flex-direction</code>)</li>
+                        <li><code>flex-end</code>: los items se ubican hacia el final de su
+                            linea</li>
+                        <li><code>center</code>: los items son centrados en medio de su linea</li>
+                        <li><code>space-between</code>: los items son distribuidos
+                            uniformemente en su linea alcanzando a ocupar el 100% del ancho
+                            disponible. El primer item se ubica al principio y el último hacia el
+                            final de la linea.
+                        <li><code>space-around</code>: los items se distribuyen de manera
+                            uniforme en la misma linea pero igualando los espacios a su alrededor.<br>
+                            Es importante notar que todos los espacios no son visualmente iguales,
+                            dado que el primer item presentará una unidad de espacio a su izquierda
+                            y dos a su derecha. Esto se debe a que todos los elementos llevan
+                            espacios iguales a ambos lados.</li>
+                        <li><code>space-evenly</code>: los items se distribuyen de manera que
+                            visualmente los espacios entre ellos sean iguales.</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Align Items -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>align-items</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/05-align-items.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Muy similar a como <code>justify-content</code> funciona, pero afecta al
+                        eje secundario (eje x) en lugar del eje principal</p>
+
+                    <pre class="prettyprint"><code class="language-css">.flex-container {
+    align-items: flex-start | flex-end | center | baseline | stretch;
+}</code></pre>
+                    <ul>
+                        <li><code>flex-start</code>: los elementos se ubican a partir del valor 0
+                            del eje secundario</li>
+                        <li><code>flex-end</code>: los elementos se ubican en sentido opuesto al
+                            dado por <code>flex-start</code></li>
+                        <li><code>center</code>: los items se centran en el eje secundario</li>
+                        <li><code>baseline</code>: los elementos se alinean de acuerdo a su linea
+                            de base</li>
+                        <li><code>stretch</code>: <em>(default)</em> los elementos se expanden
+                            hasta ocupar
+                            el 100% de su contenedor (min/max width se respetan)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Align Content -->
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h3>align-content</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-5">
+                    <img src="images/06-align-content.svg" />
+                </div>
+                <div class="column-7">
+                    <p>Muy similar a como <code>justify-content</code> funciona en cuanto a
+                        items, pero en este caso <code>align-items</code> afecta a la linea de
+                        elementos</p>
+                    <p class="note"><strong>Nota</strong>:<br> Esta propiedad no tiene efecto
+                        cuando solo hay
+                        una linea de elementos flex</p>
+
+                    <pre class="prettyprint"><code class="language-css">.flex-container {
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}</code></pre>
+                    <ul>
+                        <li><code>flex-start</code>: las lineas se ajustan al principio del
+                            contenedor</li>
+                        <li><code>flex-end</code>: las lineas se ajustan al final del
+                            contenedor</li>
+                        <li><code>center</code>: las lineas se ajustan en el centro del
+                            contenedor</li>
+                        <li><code>space-between</code>: las lineas se desplazan ocupando todo
+                            el espacio dentro del contenedor pegando las lineas del comienzo y
+                            fin a los margenes superior e inferior y distribuyendo el resto en
+                            el espacio sobrante.</li>
+                        <li><code>space-around</code>: las lineas se distribuyen uniformemente
+                            con igual espacio entre sí</li>
+                        <li><code>stretch</code>: <em>(default)</em> las lineas se estiran para
+                            ocupar todo el espacio disponible</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex-container caja">
+            <div class="row">
+                <div class="column-12">
+                    <h2>Ejemplos</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column-12">
+                    <p data-height="350" data-theme-id="dark" data-slug-hash="EKEYob"
+                        data-default-tab="result" data-user="css-tricks" data-pen-title="Demo Flexbox 1"
+                        class="codepen">See the
+                        Pen <a href="https://codepen.io/team/css-tricks/pen/EKEYob/">Demo Flexbox 1</a>
+                        by CSS-Tricks (<a href="https://codepen.io/css-tricks">@css-tricks</a>) on
+                        <a href="https://codepen.io">CodePen</a>.</p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column-12">
+                    <p data-height="350" data-theme-id="dark" data-slug-hash="YqaKYR"
+                        data-default-tab="result" data-user="css-tricks" data-pen-title="Demo Flexbox 2"
+                        class="codepen">See the Pen <a href="https://codepen.io/team/css-tricks/pen/YqaKYR/">Demo
+                            Flexbox 2</a> by CSS-Tricks (<a href="https://codepen.io/css-tricks">@css-tricks</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column-12">
+                    <p data-height="350" data-theme-id="dark" data-slug-hash="vWEMWw"
+                        data-default-tab="result" data-user="chriscoyier" data-pen-title="Demo Flexbox 3"
+                        class="codepen">See the Pen <a href="https://codepen.io/chriscoyier/pen/vWEMWw/">Demo
+                            Flexbox 3</a> by Chris Coyier (<a href="https://codepen.io/chriscoyier">@chriscoyier</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        <script src="../../js/app.js"></script>
 
 </body>
 
