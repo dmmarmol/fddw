@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/prettyprint.theme.css" rel="stylesheet">
+    <link href="../../css/grid.css" rel="stylesheet">
+    <title>Clase 03.02 - Layouts con Flexbox</title>
+</head>
+
+<body>
+
+    <div class="caja">
+        <h1>Clase 03.2 - Fundamentos del diseño web</h1>
+    </div>
+
+    <div class="caja">
+        <h2>Sumario: Clase 03.02</h2>
+        <h3>Layouts con Flexbox</h3>
+        <p>
+            <strong>Flexbox</strong> <em>(o cajas flexibiles)</em> es una herramienta introducida
+            en CSS3 que nos permite construir layouts (estructuras), alinar y distribuir elementos
+            ocupando el espacio disponible de un contendor de manera sencilla.
+        </p>
+        <p>La idea principal detrás de Flexbox es la de darle la pósibilidad a un contenedor de
+            distribuir todos sus elementos hijos de manera que puedan trabajar con todo el espacio
+            disponible</p>
+
+        <a class="docs" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Documentación:
+            A guide to flexbox</a>
+    </div>
+
+
+    <div class="caja">
+
+        <h3>
+            Propiedades de los padres (contenedores)
+        </h3>
+
+        <div class="flex-container">
+            <div class="column-5 caja">
+                <img src="images/01-container.svg" />
+            </div>
+            <div class="column-7 caja">
+                <pre class="prettyprint"><code class="language-css">.flex-container {
+    background: transparent;
+}
+p:active {
+    color: white;
+    background: red; /** El fondo pasa de transparente a ser rojo */
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="caja">
+        <h3>
+            <a href="pseudo_css.html">
+                Pseudo Clases y Pseudo Elementos
+            </a>
+        </h3>
+        <div class="caja">
+            <h4>Pseudo Clases</h4>
+            <ul>
+                <li>:hover</li>
+                <li>:active</li>
+                <li>:focus</li>
+                <li>:first-child</li>
+                <li>:last-child</li>
+            </ul>
+            <h4>Pseudo Elementos</h4>
+            <ul>
+                <li>::first-line</li>
+                <li>::first-letter</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="caja">
+        <h3>
+            <a href="tipografias_css.html">
+                Tipografías para la Web
+            </a>
+        </h3>
+        <div class="caja">
+            <ul>
+                <li>selector @font-face</li>
+                <li>Google Fonts</li>
+                <li>Icon Fonts</li>
+                <li>Columnas tipográficas</li>
+                <li>Alineación</li>
+                <li>Interlineado</li>
+                <li>Propiedades de texto</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="caja">
+        <h3>
+            <a href="practica/index.html">Actividad Práctica</a>
+        </h3>
+    </div>
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>
