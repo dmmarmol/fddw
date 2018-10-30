@@ -5,7 +5,9 @@
     <!-- Codificación UTF-8 -->
     <meta charset="UTF-8">
     <!-- Hoja de estilos -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/prettyprint.theme.css" rel="stylesheet">
+    <link href="../../css/grid.css" rel="stylesheet">
 
     <title>Clase 03 - Pseudo Clases y Pseudo Elementos</title>
 </head>
@@ -19,11 +21,14 @@
             pero también existen las pseudo-clases y pseudo-elementos
             que nos permiten ser un poco más granular al momento de aplicar estilos
         </p>
-        <p>A diferencia de los selectores del tipo clase o id, estos <strong>no pueden llevar un nombre personalizado</strong>.
+        <p>A diferencia de los selectores del tipo clase o id, estos <strong>no pueden llevar un
+                nombre personalizado</strong>.
             Las Pseudo clases se escriben con el prefijo <code>:</code> (dos puntos). Ejemplo <code>:active</code><br>
-            Los Pseudo elementos se escriben con doble dos puntos <code>::</code> para diferenciarse.
+            Los Pseudo elementos se escriben con doble dos puntos <code>::</code> para
+            diferenciarse.
         </p>
-        <a class="docs" href="https://www.growingwiththeweb.com/2012/08/pseudo-classes-vs-pseudo-elements.html" target="_blank">
+        <a class="docs" href="https://www.growingwiththeweb.com/2012/08/pseudo-classes-vs-pseudo-elements.html"
+            target="_blank">
             Ver Fuente
         </a>
     </div>
@@ -31,7 +36,8 @@
     <div class="caja">
         <h2>Pseudo Clases</h2>
         <p>
-            Las pseudo clases afectan a elementos del DOM pero solo dependiendo de su estado en lugar de en su
+            Las pseudo clases afectan a elementos del DOM pero solo dependiendo de su estado en
+            lugar de en su
             información.
             Existen algunas pseudo-clases muy comunes
         </p>
@@ -58,7 +64,8 @@
 
         <div class="caja" id="#active">
             <h4>Active</h4>
-            <p>Los estilos presentes se verán cuando el usuario posa haga click (y no lo suelte) sobre el elemento</p>
+            <p>Los estilos presentes se verán cuando el usuario posa haga click (y no lo suelte)
+                sobre el elemento</p>
             <pre class="prettyprint"><code class="language-css">p {
         background: transparent;
     }
@@ -115,7 +122,8 @@ p:last-child {
         <p>
             A diferencia de las pseudo clases, los pseudo elementos
             crean nuevos elementos que no existen en el HTML al momento de escribirlo
-            y permiten ser manipulados para aplicar estilos evitando incrementar el tamaño del código HTML
+            y permiten ser manipulados para aplicar estilos evitando incrementar el tamaño del
+            código HTML
         </p>
         <ul>
             <li><code>::first-line</code></li>
@@ -134,23 +142,30 @@ p.destacado::first-line {
 }</code></pre>
             <div class="example-first-line-letter">
                 <p class="capitular">Primer Parrafo con letra capitular</p>
-                <p class="destacado">Segundo Parrafo Facilisi penatibus libero eros condimentum scelerisque augue
-                    nascetur vestibulum mus risus consectetur. Facilisi penatibus libero eros condimentum scelerisque
-                    augue nascetur vestibulum mus risus consectetur. Facilisi penatibus libero eros condimentum
+                <p class="destacado">Segundo Parrafo Facilisi penatibus libero eros condimentum
+                    scelerisque augue
+                    nascetur vestibulum mus risus consectetur. Facilisi penatibus libero eros
+                    condimentum scelerisque
+                    augue nascetur vestibulum mus risus consectetur. Facilisi penatibus libero eros
+                    condimentum
                     scelerisque
                     augue nascetur vestibulum mus risus consectetur.</p>
             </div>
 
-            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter" target="_blank">
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-letter"
+                target="_blank">
                 Ver Documentación ::first-letter
             </a>
-            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line" target="_blank">
+            <a class="docs" href="https://developer.mozilla.org/en-US/docs/Web/CSS/::first-line"
+                target="_blank">
                 Ver Documentación ::first-line
             </a>
         </div>
     </div>
 
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+    <script src="../../js/app.js"></script>
 </body>
 
 </html>

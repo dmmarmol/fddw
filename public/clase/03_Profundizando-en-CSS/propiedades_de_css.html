@@ -5,7 +5,9 @@
     <!-- Codificación UTF-8 -->
     <meta charset="UTF-8">
     <!-- Hoja de estilos -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/prettyprint.theme.css" rel="stylesheet">
+    <link href="../../css/grid.css" rel="stylesheet">
 
     <title>Clase 03 - Propiedades de CSS</title>
 </head>
@@ -18,7 +20,8 @@
             Las siguientes propiedades son sólo un grupo de propiedades comunes
             pueden verse en la gran mayoria de los sitios web.
         </p>
-        <a class="docs" href="https://zellwk.com/blog/9-important-css-properties-you-must-know/" target="_blank">
+        <a class="docs" href="https://zellwk.com/blog/9-important-css-properties-you-must-know/"
+            target="_blank">
             Ver Fuente
         </a>
     </div>
@@ -26,7 +29,8 @@
     <div class="caja">
         <h2><code>display</code></h2>
         <p>
-            La propiedad <code>display</code> tiene muchos valores posibles, pero solo 4 son los más utilizados.
+            La propiedad <code>display</code> tiene muchos valores posibles, pero solo 4 son los
+            más utilizados.
         </p>
 
         <pre class="prettyprint"><code class="language-css">div {
@@ -37,31 +41,42 @@
 }</code></pre>
 
         <p>
-            <strong>block:</strong> Los elementos del tipo block ocupan todo el espacio disponible y no pueden ser
-            ubicados en la misma linea horizontal que otro elemento del tipo block (excepto que posea la propiedad
-            <strong>float</strong>). Es el valor por default de elementos como los &lt;div&gt;, &lt;p&gt;, &lt;ul&gt; o
+            <strong>block:</strong> Los elementos del tipo block ocupan todo el espacio disponible
+            y no pueden ser
+            ubicados en la misma linea horizontal que otro elemento del tipo block (excepto que
+            posea la propiedad
+            <strong>float</strong>). Es el valor por default de elementos como los &lt;div&gt;,
+            &lt;p&gt;, &lt;ul&gt; o
             &lt;section&gt;, entre otros.
         </p>
         <p>
-            <strong>inline:</strong> Los elementos del tipo inline pueden ser ubicados en la misma linea horizontal
-            que otro elemento del tipo inline y se ajustan al espacio ocupado por el contenido que poseen.<br />
+            <strong>inline:</strong> Los elementos del tipo inline pueden ser ubicados en la misma
+            linea horizontal
+            que otro elemento del tipo inline y se ajustan al espacio ocupado por el contenido que
+            poseen.<br />
             La propiedad <strong>float</strong> no tiene ningún efecto sobre ellos.<br />
-            Es el valor por default de elementos como &lt;a&gt;, &lt;span&gt; o &lt;strong&gt;, entre otros.
+            Es el valor por default de elementos como &lt;a&gt;, &lt;span&gt; o &lt;strong&gt;,
+            entre otros.
         </p>
         <p>
-            <strong>inline-block:</strong> Los elementos del tipo inline-block combinan las propiedades de los tipo
+            <strong>inline-block:</strong> Los elementos del tipo inline-block combinan las
+            propiedades de los tipo
             block e inline block.
-            Es posible determinar medidas de ancho y alto al mismo tiempo que permite tener otros elementos del tipo
+            Es posible determinar medidas de ancho y alto al mismo tiempo que permite tener otros
+            elementos del tipo
             inline-block e inline en su misma linea horizontal.<br />
             La propiedad <strong>float</strong> no tiene ningún efecto sobre ellos.
         </p>
         <p>
-            <strong>none:</strong> Este valor permite ocultar el elemento dentro del sitio de manera que no solo no
+            <strong>none:</strong> Este valor permite ocultar el elemento dentro del sitio de
+            manera que no solo no
             será
-            visible sino que tampoco ocupara espacio (al contrario de lo que ocurre con la propiedad <strong>opacity</strong>).
+            visible sino que tampoco ocupara espacio (al contrario de lo que ocurre con la
+            propiedad <strong>opacity</strong>).
         </p>
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/display" target="_blank">Ver Documentación</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/display" target="_blank">Ver
+            Documentación</a>
         <img src="images/display-values.jpg" />
     </div>
 
@@ -81,7 +96,8 @@
         <ul>
             <li><strong>px</strong>: Pixels</li>
             <li><strong>em</strong>: Unidad de medida relativa al valor de la propiedad <strong>font-size</strong></li>
-            <li><strong>rem</strong>: Muy similar a em, pero toma el valor de font-size establecido en la etiqueta
+            <li><strong>rem</strong>: Muy similar a em, pero toma el valor de font-size establecido
+                en la etiqueta
                 <strong>html</strong></li>
             <li><strong>%</strong>: Porcentajes</li>
             <li><strong>auto</strong>: automático</li>
@@ -132,7 +148,8 @@
 
         <h4>Centrado Horizontal</h4>
         <p>
-            Margenes horizontales con valor <strong>auto</strong> sirven para <strong>centrar contenido</strong>
+            Margenes horizontales con valor <strong>auto</strong> sirven para <strong>centrar
+                contenido</strong>
             <em>(que posea width/max-width)</em> horizontalmente
         </p>
         <pre class="prettyprint"><code class="language-css">div {
@@ -141,9 +158,11 @@
 
         <img src="images/box-model.jpg" />
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/margin" target="_blank">Ver Documentación:
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/margin" target="_blank">Ver
+            Documentación:
             Margin</a>
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/padding" target="_blank">Ver Documentación:
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/padding" target="_blank">Ver
+            Documentación:
             Padding</a>
     </div>
 
@@ -176,7 +195,8 @@
     <div class="caja">
         <h2><code>float</code></h2>
         <p>
-            La propiedad <strong>float</strong> en escencia, sirve para acercar el eje mas lejano del elemento
+            La propiedad <strong>float</strong> en escencia, sirve para acercar el eje mas lejano
+            del elemento
             afectado
             junto al eje más cercano del elemento siguiente.<br>
             En otras palabras, anula el efecto de los elementos del tipo block
@@ -195,13 +215,15 @@
     float: none;
 }</code></pre>
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/float" target="_blank">Ver Documentación</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/float" target="_blank">Ver
+            Documentación</a>
     </div>
 
     <div class="caja">
         <h2><code>clear</code></h2>
         <p>
-            Si bien <code>float</code> puede sernos muy útil, también puede traernos dolores de cabeza.
+            Si bien <code>float</code> puede sernos muy útil, también puede traernos dolores de
+            cabeza.
             Para evitarlo, hay que "cancelar" los floats y para ello surge la propiedad <code>clear</code>
         </p>
 
@@ -217,14 +239,16 @@
     clear: both; /** Cancela floats a ambos lados del elemento */
 }</code></pre>
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/clear" target="_blank">Ver Documentación</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/clear" target="_blank">Ver
+            Documentación</a>
     </div>
 
 
     <div class="caja">
         <h2><code>background</code></h2>
         <p>
-            Esta propiedad sirve para editar el fondo de una caja, ya sea como un color, un gradiente o una imagen
+            Esta propiedad sirve para editar el fondo de una caja, ya sea como un color, un
+            gradiente o una imagen
         </p>
 
         <pre class="prettyprint"><code class="language-css">div {
@@ -262,7 +286,8 @@
     color: green; /** valor por nombre */    
 }</code></pre>
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/color" target="_blank">Ver Documentación</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/color" target="_blank">Ver
+            Documentación</a>
     </div>
 
 
@@ -285,11 +310,14 @@
     font-style: 9px;
 }</code></pre>
 
-        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/font" target="_blank">Ver Documentación</a>
+        <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/font" target="_blank">Ver
+            Documentación</a>
     </div>
 
 
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+    <script src="../../js/app.js"></script>
 </body>
 
 </html>
