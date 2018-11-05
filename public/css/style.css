@@ -1,5 +1,6 @@
 * {
   font-family: "Suez One", "Arial", sans-serif;
+  box-sizing: border-box;
 }
 
 p {
@@ -129,6 +130,9 @@ h3 code {
 /**
  * Caja
  */
+.caja .row {
+  margin-bottom: 1em;
+}
 .caja ul {
   list-style: none;
   margin-left: 0;
@@ -140,12 +144,12 @@ h3 code {
   line-height: 1.5em;
   margin-bottom: 10px;
 }
-.caja li:before {
+.caja ul li:before {
   font-family: "Consolas", "Courier", "Courier New", monospace;
   font-size: 10px;
   content: ">_ ";
 }
-.caja li code {
+.caja ul li code {
 }
 
 /**
@@ -166,10 +170,15 @@ h3 code {
  */
 pre.prettyprint {
   max-width: 100%;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
+
 pre.prettyprint code {
   display: block;
   max-width: 100%;
+  width: 100%;
   padding: 15px;
   line-height: 1.2em;
   border-radius: 3px;

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Codificación UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Hoja de estilos -->
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/prettyprint.theme.css" rel="stylesheet">
+    <link href="../../css/grid.css" rel="stylesheet">
+    <link href="css/styles_class_05.02.css" rel="stylesheet">
+
+    <title>Clase 05.02 - CSS3 Extendido</title>
+</head>
+
+<body>
+
+    <div class="caja">
+        <a href="index.html">&lt; Volver</a>
+        <h1>Propiedades de CSS3</h1>
+    </div>
+
+    <div class="caja">
+
+        <!-- Border Radius -->
+        <div class="flex-container caja">
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h3>Bordes redondeados</h3>
+                    <p>
+                        A través de la propiedad <code>border-radius</code> podemos personalizar el
+                        radio de
+                        cada esquina de una caja.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.radius {
+    border-radius: 8px; /* 8px en cada esquina */
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square radius01"></div>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.radius {
+    /** 10px arriba en diagonal de arriba hacia abajo y 30px en diagonal de abajo hacia arriba */
+    border-radius: 10px 30px; 
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square radius02"></div>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.radius {
+    /** En sentido de las ajugas del reloj comenzando por izq. arriba */
+    border-radius: 10px 20px 30px 40px; 
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square radius03"></div>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.radius {
+    border-radius: 50%;
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square radius04"></div>
+                </div>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/border-radius"
+                target="_blank">Documentación</a>
+        </div>
+
+
+        <!-- Sombras -->
+        <div class="flex-container caja">
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h3>Sombras</h3>
+                    <p>
+                        La propiedad CSS <code>box-shadow</code> describe uno o más efectos de
+                        sombra como una lista separada por comas. Permite proyectar una sombra
+                        difuminada en la estructura de casi cualquier elemento. Si un <code>border-radius</code>
+                        es especificado en un elemento con un box shadow, el box shadow asume las
+                        mismas esquinas redondeadas
+                    </p>
+                </div>
+            </div>
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h4>Valores</h4>
+                    <p>Los valores que component a una sombra van separados con espacios y
+                        respetan
+                        siempre el mismo orden</p>
+                    <ol>
+                        <li><code>inset</code>: Si no se especifica (por defecto), la sombra va
+                            por
+                            fuera de su caja contenedora. Dando la sensación de que la caja se
+                            esta
+                            despegando del fondo</li>
+                        <li><code>offset-x & offset-y</code>: definen el desplazamiento de la
+                            sombra en el eje <code>X</code> e <code>Y</code>. Los valores
+                            positivos
+                            de <code>X</code> colocan a la sombra a la derecha del elemento
+                            mientras que los negativos a la izquierda. Lo mismo pasa con <code>Y</code>
+                            pero abajo y arriba, respectivamente</li>
+                        <li><code>blur-radius</code>: Cuanto mayor sea este valor, mayor será el
+                            difuminado que se aplique a la sombra.</li>
+                        <li><code>spread-radius</code>: Los valores positivos harán que la sombra
+                            se expanda y cresca más. Los valores negativos harán lo opuesto. <em>Si
+                                no se especifica, su valor sera 0</em></li>
+                        <li><code>color</code>: cualquier valor de color valido para CSS le dará
+                            color a la sombra</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.shadow {
+    box-shadow: 2px 2px 5px 0 black;
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square shadow01"></div>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.shadow {
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+}</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square shadow02"></div>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-8">
+                    <p>Podemos aplicar estos estilos a través de pseudo-clases para dar feedback al
+                        usuario al momento de realizar una acción.</p>
+                </div>
+
+            </div>
+            <div class="flex-container row">
+                <div class="column-8">
+                    <pre class="prettyprint"><code class="language-css">.shadow {
+    box-shadow: none;
+    transition: box-shadow 400ms ease, margin-top 400ms ease;
+}
+
+.shadow:hover {
+    box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.shadow:active {
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 3px; /** 3px = 5px (offset-y) - 2px (box-shadow: offset-y) */
+}
+</code></pre>
+                </div>
+                <div class="column-4 center">
+                    <div class="square shadow03">
+                        <span>¡Haz click!</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/box-shadow" target="_blank">Documentación</a>
+        </div>
+
+
+        <!-- Gradientes -->
+        <div class="flex-container caja">
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h3>Gradientes</h3>
+                    <p>
+                        A través de los gradientes, en lugar de un color de fondo plano también
+                        podemos generar una transición progresiva entre dos o más colores.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-12">
+
+                    <p data-height="355" data-theme-id="dark" data-slug-hash="GwgMod"
+                        data-default-tab="css,result" data-user="dmmarmol" data-pen-title="GwgMod"
+                        class="codepen">See the Pen <a href="https://codepen.io/dmmarmol/pen/GwgMod/">GwgMod</a>
+                        by Diego Martín Mármol (<a href="https://codepen.io/dmmarmol">@dmmarmol</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</p>
+
+                </div>
+            </div>
+
+            <div class="flex-container row">
+                <div class="column-12">
+                    <p>A demás de especificar los colores en un gradiente, también podemos
+                        personalizar la dirección del degradado</p>
+                    <p data-height="265" data-theme-id="dark" data-slug-hash="zMxEEo"
+                        data-default-tab="css,result" data-user="dmmarmol" data-pen-title="Gradients: Directions"
+                        class="codepen">See the Pen <a href="https://codepen.io/dmmarmol/pen/zMxEEo/">Gradients:
+                            Directions</a> by Diego Martín Mármol (<a href="https://codepen.io/dmmarmol">@dmmarmol</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</p>
+                </div>
+            </div>
+
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/Gradiente" target="_blank">Documentación</a>
+        </div>
+
+
+        <!-- :before & :after -->
+        <div class="flex-container caja">
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h3><code>:before</code> & <code>:after</code></h3>
+                    <p>
+                        Existen dos tipos de pseudo-selectores ::before & ::after que nos permiten
+                        modificar el contenido del DOM (HTML) brindandonos la posiblidad de agregar
+                        un hijo anterior o posterior al elemento seleccionado
+                    </p>
+                </div>
+            </div>
+
+            <h4><code>::before</code></h4>
+            <p>
+                ::before crea un pseudo-elemento que es el primer hijo del elemento seleccionado.
+                Es usado normalmente para añadir contenido estético a un elemento, usando la
+                propiedad content. Este elemento se muestra en línea con el texto de forma
+                predeterminada
+            </p>
+            <p class="note">Solo puede haber un <code>::before</code> por elemento</p>
+
+            <div class="flex-container row">
+                <div class="column-8">
+
+                    <pre class="prettyprint"><code class="language-css">.item::before {
+    content: '-> ';
+    display: inline;
+}</code></pre>
+                </div>
+                <div class="column-4">
+                    <p class="item item01">Este contenido esta dado por el HTML</p>
+                </div>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/::before" target="_blank">Documentación</a>
+
+
+            <h4><code>::after</code></h4>
+            <p>
+                ::after coincide con el último hijo virtual del elemento seleccionado. Se usa
+                generalmente para añadir contenido estético a un elemento, usando la propiedad CSS
+                content. Este elemento se muestra en línea con el texto de forma predeterminada.
+            </p>
+            <p class="note">Solo puede haber un <code>::after</code> por elemento</p>
+
+            <div class="flex-container row">
+                <div class="column-8">
+
+                    <pre class="prettyprint"><code class="language-css">.item::after {
+    content: "Este contenido existe en CSS";
+    display: block;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 12px;
+}</code></pre>
+                </div>
+                <div class="column-4">
+                    <p class="item item02">Este contenido esta dado por el HTML</p>
+                </div>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/::after" target="_blank">Documentación</a>
+
+            <h4><code>:nth-child</code></h4>
+            <p>
+                La pseudo-clase :nth-child() de CSS coincide con uno o más elementos en función de
+                su posición entre un grupo de hermanos.
+            </p>
+
+            <div class="flex-container row">
+                <div class="column-8">
+
+                    <pre class="prettyprint"><code class="language-css">/* Selecciona cada cuarto elementos entre cualquier grupo de hermanos */
+:nth-child(4n) {
+    background-color: red;
+}</code></pre>
+                </div>
+                <div class="column-4">
+                    <ol class="example-nth">
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ol>
+                </div>
+            </div>
+
+            <a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/:nth-child" target="_blank">Documentación</a>
+        </div>
+
+    </div>
+
+
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+    <script src="../../js/app.js"></script>
+
+</body>
+
+</html>

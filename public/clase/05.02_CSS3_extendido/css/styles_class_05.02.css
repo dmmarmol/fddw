@@ -1,0 +1,74 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #467acc;
+  border: 3px solid white;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * Ejemplos
+ */
+.radius01 {
+  border-radius: 8px; /* 8px en cada esquina */
+}
+.radius02 {
+  /** 10px arriba en diagonal de arriba hacia abajo y 30px en diagonal de abajo hacia arriba */
+  border-radius: 10px 30px;
+}
+.radius03 {
+  border-radius: 10px 20px 30px 40px;
+}
+.radius04 {
+  border-radius: 50%;
+}
+
+/**
+ * Box-shadow
+ */
+.shadow01 {
+  box-shadow: 2px 2px 5px 0 black;
+}
+.shadow02 {
+  box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.shadow03 {
+  /** Estilos para centrar el texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  /** Estilos para aplicar sombra y transision */
+  box-shadow: none;
+  cursor: pointer;
+  transition: box-shadow 200ms ease, margin-top 200ms ease;
+}
+.shadow03:hover {
+  box-shadow: 0 5px 2px 0 rgba(0, 0, 0, 0.5);
+}
+.shadow03:active {
+  margin-top: 3px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Pseudo ::before & ::after
+ */
+.item {
+}
+.item01::before {
+  content: "-> ";
+  display: inline;
+}
+.item02::after {
+  content: "Este contenido existe en CSS";
+  display: block;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.example-nth :nth-child(4n) {
+  background-color: red;
+}

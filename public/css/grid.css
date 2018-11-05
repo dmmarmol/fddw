@@ -33,9 +33,20 @@
 }
 
 .flex-container .row {
-  margin: 0 -15px;
+  margin-left: -15px;
+  margin-right: -15px;
   display: flex;
   justify-content: space-between;
+}
+.flex-container.row {
+  /* margin-left: 0; */
+  /* margin-right: 0; */
+  flex-direction: row;
+}
+
+.flex-container .center {
+  display: flex;
+  justify-content: center;
 }
 
 /**
