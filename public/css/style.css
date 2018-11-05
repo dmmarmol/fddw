@@ -3,9 +3,13 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 p {
-  font-size: 14px;
-  line-height: 1.4em;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
 }
 
 blockquote {
@@ -30,12 +34,12 @@ img {
   padding: 0;
 }
 .navbar li {
-  /* margin: 5px 0 15px 0; */
+  /* margin: 5px 0 0.9375rem 0; */
   list-style: none;
 }
 .navbar li a {
   display: block;
-  line-height: 2em;
+  line-height: 2rem;
   border-bottom: 1px solid #cbcbcb;
 }
 
@@ -44,17 +48,17 @@ img {
   font-size: 10px;
   content: ">_ ";
   display: inline-block;
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 .navbar ol ol li a {
-  padding-left: 2em;
+  padding-left: 2rem;
 }
 .navbar li li {
   margin-bottom: 0;
 }
 .navbar a {
-  font-size: 14px;
-  line-height: 1.5em;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   text-decoration: none;
   color: #467acc;
   font-weight: 600;
@@ -77,7 +81,7 @@ button[disabled] {
 .docs,
 .back {
   display: inline-block;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   color: #fff;
   background-color: #7baaf7;
@@ -91,7 +95,7 @@ button[disabled] {
 .back {
   background: transparent;
   color: #7baaf7;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding-left: 0;
   padding-right: 0;
 }
@@ -108,7 +112,7 @@ code {
   color: #222;
   padding: 2px 4px;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .prettyprint code {
@@ -136,11 +140,11 @@ h3 code {
 .caja ul {
   list-style: none;
   margin-left: 0;
-  padding-left: 15px;
-  text-indent: -15px;
+  padding-left: 0.9375rem;
+  text-indent: -0.9375rem;
 }
 .caja li {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.5em;
   margin-bottom: 10px;
 }
@@ -161,8 +165,8 @@ h3 code {
   margin-bottom: 20px;
   padding: 10px;
   padding-left: 30px;
-  font-size: 14px;
-  line-height: 1.5em;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 /**
@@ -179,9 +183,19 @@ pre.prettyprint code {
   display: block;
   max-width: 100%;
   width: 100%;
-  padding: 15px;
-  line-height: 1.2em;
+  padding: 0.9375rem;
+  line-height: 1.2rem;
   border-radius: 3px;
   overflow-x: auto;
   overflow-y: hidden;
+}
+
+@media print {
+  html {
+    font-size: 14px;
+  }
+  .docs,
+  .back {
+    display: none;
+  }
 }
