@@ -1,0 +1,59 @@
+/**
+ * Estilos para los ejemplos
+ */
+.example-hover {
+  font-size: 12px;
+}
+.example-hover:hover {
+  font-size: 24px;
+}
+.example-active {
+  background: transparent;
+}
+.example-active:active {
+  color: white;
+  background: red;
+}
+.example-focus {
+  border: none;
+}
+.example-focus:focus {
+  border: 1px solid green;
+}
+
+.example-first-last-child p {
+  background: violet;
+}
+.example-first-last-child p:first-child {
+  background: green;
+}
+.example-first-last-child p:last-child {
+  background: cyan;
+}
+
+.example-first-line-letter .capitular::first-letter {
+  font-size: 24px;
+}
+.example-first-line-letter p.destacado::first-line {
+  color: blue;
+}
+
+/**
+ * Estilos para los ejemplos sobre Tipografias
+ */
+.example-columns p {
+  columns: 3 12px;
+}
+
+.example-align .align-left {
+  text-align: left;
+}
+.example-align .align-right {
+  text-align: right;
+}
+.example-align .align-center {
+  text-align: center;
+}
+.example-align .align-justify {
+  text-align: justify;
+}

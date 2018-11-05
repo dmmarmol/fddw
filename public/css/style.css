@@ -29,19 +29,39 @@ img {
   padding: 0;
 }
 .navbar li {
-  margin-bottom: 10px;
+  /* margin: 5px 0 15px 0; */
   list-style: none;
+}
+.navbar li a {
+  display: block;
+  line-height: 2em;
   border-bottom: 1px solid #cbcbcb;
+}
+
+.navbar li a:before {
+  font-family: "Consolas", "Courier", "Courier New", monospace;
+  font-size: 10px;
+  content: ">_ ";
+  display: inline-block;
+  margin-right: 1em;
+}
+.navbar ol ol li a {
+  padding-left: 2em;
+}
+.navbar li li {
+  margin-bottom: 0;
 }
 .navbar a {
   font-size: 14px;
   line-height: 1.5em;
   text-decoration: none;
-  color: #7baaf7;
-  font-weight: 500;
+  color: #467acc;
+  font-weight: 600;
+  padding: 4px 8px;
 }
 .navbar a:hover:not([disabled]) {
-  color: #467acc;
+  background-color: #2d64ba;
+  color: white;
 }
 
 /**
@@ -139,66 +159,6 @@ h3 code {
   padding-left: 30px;
   font-size: 14px;
   line-height: 1.5em;
-}
-
-/**
- * Estilos para los ejemplos
- */
-.example-hover {
-  font-size: 12px;
-}
-.example-hover:hover {
-  font-size: 24px;
-}
-.example-active {
-  background: transparent;
-}
-.example-active:active {
-  color: white;
-  background: red;
-}
-.example-focus {
-  border: none;
-}
-.example-focus:focus {
-  border: 1px solid green;
-}
-
-.example-first-last-child p {
-  background: violet;
-}
-.example-first-last-child p:first-child {
-  background: green;
-}
-.example-first-last-child p:last-child {
-  background: cyan;
-}
-
-.example-first-line-letter .capitular::first-letter {
-  font-size: 24px;
-}
-.example-first-line-letter p.destacado::first-line {
-  color: blue;
-}
-
-/**
- * Estilos para los ejemplos sobre Tipografias
- */
-.example-columns p {
-  columns: 3 12px;
-}
-
-.example-align .align-left {
-  text-align: left;
-}
-.example-align .align-right {
-  text-align: right;
-}
-.example-align .align-center {
-  text-align: center;
-}
-.example-align .align-justify {
-  text-align: justify;
 }
 
 /**
