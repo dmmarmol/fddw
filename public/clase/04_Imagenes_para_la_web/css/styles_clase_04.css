@@ -42,8 +42,15 @@
 }
 
 .example-05-01 {
-  background-image: url("./images/example02.jpg");
+  background-image: url("../images/example02.jpg");
   background-size: 100%;
   width: 600px;
   height: 400px;
+  /** Centrado del texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  text-transform: uppercase;
 }
