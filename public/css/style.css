@@ -158,6 +158,14 @@ h3 code {
 .caja ul li code {
 }
 
+.no-list {
+  list-style: none !important;
+  text-indent: 0 !important;
+}
+.no-list li:before {
+  display: none;
+}
+
 /**
  * Notas
  */
