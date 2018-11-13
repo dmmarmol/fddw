@@ -1,0 +1,84 @@
+.item::after {
+	display: block;
+	content: ":hover";
+	z-index: 5;
+}
+.item:hover::after {
+	content: "¡Click!";
+	cursor: pointer;
+}
+
+/**
+ * transition
+ */
+.example-transition .item {
+	margin-left: 0;
+	transition: margin-left 1s 0.5s;
+}
+.example-transition .item:hover {
+	margin-left: 2em;
+}
+
+/**
+ * transform()
+ */
+.example-translate .item {
+	transform: translate(0, 0);
+	transition: transform 1s;
+}
+.example-translate .item:hover {
+	/** Muevase 20px hacia la derecha del eje X */
+	transform: translate(20px, 0);
+}
+.example-translate .item:active {
+	/** Muevase 20px hacia la arriba del eje Y */
+	transform: translate(0, -20px);
+}
+
+/**
+ * rotate()
+ */
+.example-rotate .item {
+	/* transition sin delay */
+	transition: transform 1s;
+}
+.example-rotate .item:hover {
+	/** Rota 45 grados hacia la derecha */
+	transform: rotate(45deg);
+}
+.example-rotate .item:active {
+	/** Valores negativos rotan el elemento hacia la izquierda */
+	transform: rotate(-45deg);
+}
+
+/**
+ * scale()
+ */
+.example-scale .item {
+	/* transition sin delay */
+	transition: transform 1s;
+}
+.example-scale .item:hover {
+	/** Dobla su tamaño */
+	transform: scale(2);
+}
+.example-scale .item:active {
+	/** Reduce su tamaño a la mitad */
+	transform: scale(0.5);
+}
+
+/**
+ * skew()
+ */
+.example-skew .item {
+	/* transition sin delay */
+	transition: transform 1s;
+}
+.example-skew .item:hover {
+	/** Inclinación hacia la derecha */
+	transform: skew(45deg);
+}
+.example-skew .item:active {
+	/** Inclinación hacia la izquierda */
+	transform: skew(-45deg);
+}

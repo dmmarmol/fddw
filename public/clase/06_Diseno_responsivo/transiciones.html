@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Codificación UTF-8 -->
+		<meta charset="UTF-8" />
+		<!-- Hoja de estilos -->
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/prettyprint.theme.css" rel="stylesheet" />
+		<link href="../../css/grid.css" rel="stylesheet" />
+		<link href="css/styles_class_06.css" rel="stylesheet" />
+
+		<title>Clase 06 - Transiciones en CSS3</title>
+	</head>
+
+	<body>
+		<div class="caja">
+			<a href="index.html">&lt; Volver</a>
+			<h1>Clase 06 - Transiciones en CSS3</h1>
+		</div>
+
+		<div class="caja">
+			<p>
+				Previo a la introducción de CSS3, una manera común para animar contenido en una página web era a través de
+				<strong>Flash</strong> o <strong>JavaScript</strong>. A medida que CSS3 fue incluyendo propiedades para poder
+				controlar las transiciones, Flash fue cayendo en deshuso y si bien aún es posible generar transiciones con
+				JavaScript, es ideal tanto desde el concepto de una web bien construida como desde la performance que
+				<em>las transiciones sean a través de CSS</em>
+			</p>
+
+			<!-- Transition -->
+			<div class="caja">
+				<div class="flex-container row">
+					<div class="column-12">
+						<h2><code>transition</code></h2>
+						<p>
+							La propiedad <code>transition</code> permite definir la transición entre dos estados de un elemento. Hay
+							diferentes estados que pueden ser definidos utilizando pseudo-clases como :hover o :active
+						</p>
+						<p class="note">
+							La propiedad <code>transition</code> es una propiedad abreviada de <code>transition-property</code>,
+							<code>transition-duration</code>, <code>transition-timing-function</code>, y
+							<code>transition-delay</code>.
+						</p>
+						<pre class="prettyprint"><code class="language-css">/* Aplicar a 1 propiedad */
+/* nombre de la propiedad | duración */
+transition: margin-left 4s;
+
+/* nombre de la propiedad | duración | retardo */
+transition: margin-left 4s 1s;
+
+/* nombre de la propiedad | duración | función | retardo */
+transition: margin-left 4s ease-in-out 1s;
+
+/* Aplicar a 2 propiedades */
+transition: margin-left 4s, color 1s;
+
+/* Aplicar a todas las propiedades que cambien */
+transition: all 0.5s ease-out;</code></pre>
+						<p class="note">
+							Nótese que el orden es importante dentro de los elementos de la propiedad. El primer valor que puede ser
+							analizado como tiempo es asignado a la propiedad <code>transition-duration</code>, y el segundo valor que
+							puede ser analizado como tiempo es asignado a la propiedad <code>transition-delay</code>.
+						</p>
+					</div>
+				</div>
+
+				<div class="flex-container row">
+					<div class="column-12">
+						<h3>Ejemplo con <code>margin-left</code></h3>
+					</div>
+					<div class="column-8">
+						<pre class="prettyprint"><code class="language-css">.item {
+    margin-left: 0;
+    /* nombre de la propiedad | duración | retardo */
+    transition: margin-left 1s 0.5s;
+}
+.item:hover {
+    margin-left: 2em;
+}
+</code></pre>
+					</div>
+					<div class="column-4 example-transition">
+						<div class="item square"></div>
+					</div>
+					<div class="column-12">
+						<a class="docs" href="https://developer.mozilla.org/es/docs/Web/CSS/transition" target="_blank"
+							>Documentación</a
+						>
+					</div>
+				</div>
+            </div>
+            
+            <div class="caja">
+				<div class="flex-container row">
+					<div class="column-12">
+						<h2><code>transform</code></h2>
+						<p>
+							La propiedad <code>transform</code> fue también introducida en CSS3 y usándola los elementos pueden ser
+							trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
+						</p>
+						<ol>
+							<li><code>translateX(x)</code>: Permite transicionar un elemento en el eje X</li>
+							<li><code>translateY(y)</code>: Permite transicionar un elemento en el eje Y</li>
+
+							<li><code>translate(x, y)</code>: Abreviatura de <code>translateX()</code> <code>translateY()</code></li>
+							<li>
+								<code>translate3d(x, y, z)</code>: Similar a <code>translate()</code> pero con el agregado del eje Z
+								como tercer parametro (<code>translateZ()</code>)
+							</li>
+							<li>
+								<code>rotate(deg)</code>: Proporcionando un valor en grados (<code>90deg</code>) podremos rotar el
+								elemento en el eje X
+							</li>
+							<li>
+								<code>scale(value)</code>: Funciona y posee las mismas variantes que <code>translate()</code> pero se
+								utiliza para aumentar o reducir el tamaño de un objecto. Sus valor incial es <code>1</code> siendo este
+								su escala actual. También existen <code>scaleX()</code>, <code>scaleY()</code> y <code>scaleZ()</code>
+							</li>
+							<li>
+								<code>skew()</code>: similar a <code>translate</code> y <code>scale</code> pero con ella podremos sesgar
+								un elemento
+							</li>
+						</ol>
+					</div>
+                </div>
+                
+                <!-- Translate -->
+				<div class="flex-container row">
+                    <div class="column-12">
+                        <h3><code>translate()</code></h3>
+                    </div>
+					<div class="column-8">
+						<pre class="prettyprint"><code class="language-css">.item {
+    /* transition sin delay */
+    transition: transform 1s;
+    transform: translate(0, 0);
+}
+.item:hover {
+    /** Muevase 20px hacia la derecha del eje X */
+    transform: translate(20px, 0);
+}
+.item:active {
+    /** Muevase 20px hacia la arriba del eje Y */
+    transform: translate(0, -20px);
+}
+</code></pre>
+					</div>
+					<div class="column-4 example-translate">
+						<div class="item square"></div>
+					</div>
+				</div>
+                
+                <!-- rotate -->
+				<div class="flex-container row">
+                    <div class="column-12">
+                        <h3><code>rotate()</code></h3>
+                    </div>
+					<div class="column-8">
+						<pre class="prettyprint"><code class="language-css">.item {
+    /* transition sin delay */
+    transition: transform 1s;    
+}
+.item:hover {
+    /** Rota 45 grados hacia la derecha */
+    transform: rotate(45deg);
+}
+.item:active {
+    /** Valores negativos rotan el elemento hacia la izquierda */
+    transform: rotate(-45deg);
+}
+</code></pre>
+					</div>
+					<div class="column-4 example-rotate">
+						<div class="item square"></div>
+					</div>
+				</div>
+                
+                <!-- scale -->
+				<div class="flex-container row">
+                    <div class="column-12">
+                        <h3><code>scale()</code></h3>
+                    </div>
+					<div class="column-8">
+						<pre class="prettyprint"><code class="language-css">.item {
+    /* transition sin delay */
+    transition: transform 1s;
+}
+.item:hover {
+    /** Dobla su tamaño */
+    transform: scale(2);
+}
+.item:active {
+    /** Reduce su tamaño a la mitad */
+    transform: scale(0.5);
+}
+</code></pre>
+					</div>
+					<div class="column-4 example-scale">
+						<div class="item square"></div>
+					</div>
+				</div>
+                
+                <!-- skew -->
+				<div class="flex-container row">
+                    <div class="column-12">
+                        <h3><code>skew()</code></h3>
+                    </div>
+					<div class="column-8">
+						<pre class="prettyprint"><code class="language-css">.item {
+    /* transition sin delay */
+    transition: transform 1s;
+}
+.item:hover {
+    /** Inclinación hacia la izquierda */
+    transform: skew(45deg);
+}
+.item:active {
+    /** Inclinación hacia la derecha */
+    transform: skew(-45deg);
+}
+</code></pre>
+					</div>
+					<div class="column-4 example-skew">
+						<div class="item square"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+		<script src="../../js/app.js"></script>
+	</body>
+</html>

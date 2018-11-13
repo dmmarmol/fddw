@@ -1,74 +1,74 @@
 * {
-  font-family: "Suez One", "Arial", sans-serif;
-  box-sizing: border-box;
+	font-family: "Suez One", "Arial", sans-serif;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 p {
-  font-size: 0.875rem;
-  line-height: 1.4rem;
+	font-size: 0.875rem;
+	line-height: 1.4rem;
 }
 
 blockquote {
-  font-style: italic;
+	font-style: italic;
 }
 
 img {
-  margin-bottom: 20px;
-  max-width: 100%;
-  display: block;
+	margin-bottom: 20px;
+	max-width: 100%;
+	display: block;
 }
 img.center {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
 /**
  * Menu de navegacion
  */
 .navbar {
-  width: 100%;
-  max-width: 300px;
+	width: 100%;
+	max-width: 300px;
 }
 .navbar ol {
-  padding: 0;
+	padding: 0;
 }
 .navbar li {
-  /* margin: 5px 0 0.9375rem 0; */
-  list-style: none;
+	/* margin: 5px 0 0.9375rem 0; */
+	list-style: none;
 }
 .navbar li a {
-  display: block;
-  line-height: 2rem;
-  border-bottom: 1px solid #cbcbcb;
+	display: block;
+	line-height: 2rem;
+	border-bottom: 1px solid #cbcbcb;
 }
 
 .navbar li a:before {
-  font-family: "Consolas", "Courier", "Courier New", monospace;
-  font-size: 10px;
-  content: ">_ ";
-  display: inline-block;
-  margin-right: 1rem;
+	font-family: "Consolas", "Courier", "Courier New", monospace;
+	font-size: 10px;
+	content: ">_ ";
+	display: inline-block;
+	margin-right: 1rem;
 }
 .navbar ol ol li a {
-  padding-left: 2rem;
+	padding-left: 2rem;
 }
 .navbar li li {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 .navbar a {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  text-decoration: none;
-  color: #467acc;
-  font-weight: 600;
-  padding: 4px 8px;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	text-decoration: none;
+	color: #467acc;
+	font-weight: 600;
+	padding: 4px 8px;
 }
 .navbar a:hover:not([disabled]) {
-  background-color: #2d64ba;
-  color: white;
+	background-color: #2d64ba;
+	color: white;
 }
 
 /**
@@ -76,136 +76,189 @@ img.center {
  */
 a[disabled],
 button[disabled] {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+	opacity: 0.5;
 }
 .docs,
-.back {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #7baaf7;
-  padding: 8px 12px;
-  border-radius: 3px;
-  text-decoration: none;
+.back,
+.button {
+	display: inline-block;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #7baaf7;
+	padding: 8px 12px;
+	border-radius: 3px;
+	text-decoration: none;
 }
 .docs + .docs {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 .back {
-  background: transparent;
-  color: #7baaf7;
-  font-size: 0.75rem;
-  padding-left: 0;
-  padding-right: 0;
+	background: transparent;
+	color: #7baaf7;
+	font-size: 0.75rem;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 pre,
 code,
 pre span {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 16px;
 }
 
 code {
-  background-color: #cbcbcb;
-  color: #222;
-  padding: 2px 4px;
-  border-radius: 3px;
-  font-size: 0.8125rem;
+	background-color: #cbcbcb;
+	color: #222;
+	padding: 2px 4px;
+	border-radius: 3px;
+	font-size: 0.8125rem;
 }
 
 .prettyprint code {
-  background-color: inherit;
-  color: inherit;
-  padding: inherit;
-  border-radius: inherit;
-  font-size: inherit;
+	background-color: inherit;
+	color: inherit;
+	padding: inherit;
+	border-radius: inherit;
+	font-size: inherit;
 }
 
 h1 code,
 h2 code {
-  font-size: 28px;
+	font-size: 28px;
 }
 h3 code {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 /**
  * Caja
  */
 .caja .row {
-  margin-bottom: 1em;
+	margin-bottom: 1em;
 }
 .caja ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0.9375rem;
-  text-indent: -0.9375rem;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0.9375rem;
+	text-indent: -0.9375rem;
 }
 .caja li {
-  font-size: 0.875rem;
-  line-height: 1.5em;
-  margin-bottom: 10px;
+	font-size: 0.875rem;
+	line-height: 1.5em;
+	margin-bottom: 10px;
 }
 .caja ul li:before {
-  font-family: "Consolas", "Courier", "Courier New", monospace;
-  font-size: 10px;
-  content: ">_ ";
+	font-family: "Consolas", "Courier", "Courier New", monospace;
+	font-size: 10px;
+	content: ">_ ";
 }
 .caja ul li code {
 }
 
 .no-list {
-  list-style: none !important;
-  text-indent: 0 !important;
+	list-style: none !important;
+	text-indent: 0 !important;
 }
 .no-list li:before {
-  display: none;
+	display: none;
 }
 
 /**
  * Notas
  */
 .note {
-  background: #fff3d4;
-  border-left: solid 3px #f6b73c;
-  margin-bottom: 20px;
-  padding: 10px;
-  padding-left: 30px;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+	background: #fff3d4;
+	border-left: solid 3px #f6b73c;
+	margin-bottom: 20px;
+	padding: 10px;
+	padding-left: 30px;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+}
+
+blockquote {
+	background-color: #c9c9c9;
+	color: #444;
+	font-size: 1em;
+	font-weight: 500;
+	line-height: 1.5em;
+	padding: 1em 0.9em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.6);
+}
+cite {
+	margin-top: 1em;
+	display: block;
+}
+cite::before {
+	content: "-. ";
+	display: inline;
 }
 
 /**
  * Estilos de la libreria prittyprint
  */
 pre.prettyprint {
-  max-width: 100%;
-  width: 100%;
-  margin-top: 0;
-  margin-bottom: 10px;
+	max-width: 100%;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 10px;
 }
 
 pre.prettyprint code {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  padding: 0.9375rem;
-  line-height: 1.2rem;
-  border-radius: 3px;
-  overflow-x: auto;
-  overflow-y: hidden;
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	padding: 0.9375rem;
+	line-height: 1.2rem;
+	border-radius: 3px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+/**
+ * Ejemplos
+ */
+[class*="example-"] {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.square {
+	width: 100%;
+	height: 100%;
+	background-color: #467acc;
+	border: 3px solid white;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+	/** Estilos para centrar el texto */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 14px;
+}
+.item-wrapper {
+	content: "";
+	width: 125px;
+	height: 125px;
+	display: block;
+	background-color: #c9c9c9;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 
 @media print {
-  html {
-    font-size: 14px;
-  }
-  .docs,
-  .back {
-    display: none;
-  }
+	html {
+		font-size: 14px;
+	}
+	.docs,
+	.back {
+		display: none;
+	}
 }

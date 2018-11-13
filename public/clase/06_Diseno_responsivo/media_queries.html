@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Codificación UTF-8 -->
+		<meta charset="UTF-8" />
+		<!-- Hoja de estilos -->
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/prettyprint.theme.css" rel="stylesheet" />
+		<link href="../../css/grid.css" rel="stylesheet" />
+		<link href="css/styles_class_06.css" rel="stylesheet" />
+
+		<title>Clase 06 - Media Queries</title>
+	</head>
+
+	<body>
+		<div class="caja">
+			<a href="index.html">&lt; Volver</a>
+			<h1>Clase 06 - Media Queries</h1>
+		</div>
+
+		<div class="caja">
+			<!-- css media queries -->
+			<div class="caja">
+				<h2>¿Qué son "media queries"?</h2>
+				<p></p>
+				<div class="flex-container row">
+					<div class="column-12">
+						<h2><code>@media</code></h2>
+						<p>
+							Otra tecnologia incorporada en CSS3, los <strong>media queries</strong> permiten adaptar la representación
+							del contenido a las características del dispositivo. Las media queries dejan que la presentación del
+							contenido se adapte a un rango específico de dispositivos de salida sin tener que cambiar el contenido en
+							sí.
+						</p>
+
+						<a href="https://developer.mozilla.org/es/docs/CSS/Media_queries" class="docs" target="_blank"
+							>Ver Documentación</a
+						>
+
+						<hr />
+						<br />
+						<h3>Sintaxis</h3>
+						<p>
+							Las Media queries consisten de un <strong>media type</strong> y una o mas expresiones, implicando
+							características del medio, la cual se resuelve como verdadera o falsa. El resultado de la consulta es
+							verdadera si el tipo de medio especificado en el media query concuerda con el tipo de dispositivo que está
+							siendo mostrado y todas las expresiones en el media query son verdaderas.
+						</p>
+
+						<p class="note">
+							Se escriben con el selector <code>@media</code> seguido de un espacio y la(s) condición(es)
+						</p>
+						<pre class="prettyprint"><code class="language-css">.columna {
+    width: 50%;
+}
+@media (max-width: 1024px) {
+    .columna {
+        width: 100%;
+    }
+}
+</code></pre>
+						<p>
+							Es posible también dedicar hojas de estilos enteras a un media query aplicando una regla de este tipo a la
+							etiqueta <code>&lt;link&gt;</code>
+						</p>
+						<pre
+							class="prettyprint"
+						><code class="language-html">&lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;</code></pre>
+					</div>
+				</div>
+			</div>
+
+			<div class="caja">
+				<div class="flex-container row">
+					<div class="column-12">
+						<h3>Operadores logicos</h3>
+						<p>Media queries soporta una serie de operadores lógicos</p>
+						<ul>
+							<li>ONLY</li>
+							<li>AND</li>
+							<li>Lista separada por comas (OR)</li>
+							<li>NOT</li>
+						</ul>
+
+						<h4>ONLY</h4>
+						<p>
+							El operador only previene que navegadores antiguos que no soportan queries con funciones apliquen los
+							estilos asignados:.
+						</p>
+						<pre
+							class="prettyprint"
+						><code class="language-css">@media only screen and (max-width: 1024px) { ... }</code></pre>
+
+						<h4>AND</h4>
+						<p>Permite concatenar condiciones</p>
+						<pre
+							class="prettyprint"
+						><code class="language-css">@media (min-width: 700px) and (orientation: landscape) { ... }</code></pre>
+
+						<h4>Lista separada por comas (OR)</h4>
+						<p>
+							Las listas separadas por comas se comportan como el operador or cuando es usado en media queries. Cuando
+							utilice una lista separada por comas y alguno de los queries retorna verdadero, el estilo o la hoja de
+							estilos sera aplicada.
+						</p>
+						<pre
+							class="prettyprint"
+						><code class="language-css">@media (min-width: 700px), (min-height: 800px) { ... }</code></pre>
+
+						<h4>NOT</h4>
+						<p>
+							El operador not aplica a todo el query y retorna verdadero si es posible y sino retorna falso (como por
+							ejemplo <code>monochrome</code> en un monitor a color o una ventana con un ancho mínimo de
+							<code>min-width: 700px</code> en un monitor de <code>600px</code>).
+						</p>
+						<pre
+							class="prettyprint"
+						><code class="language-css">@media not screen and (color), print and (color)</code></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+		<script src="../../js/app.js"></script>
+	</body>
+</html>

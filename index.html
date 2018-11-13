@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="public/css/style.css" />
+		<link rel="stylesheet" href="public/css/prettyprint.theme.css" />
+		<link rel="stylesheet" href="public/css/grid.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/grid.css">
+		<title>Fundamentos del Diseño Web</title>
+	</head>
 
-    <title>Fundamentos del Diseño Web</title>
-</head>
+	<body>
+		<h1>Fundamentos del Diseño Web <small>2018</small></h1>
+		<hr />
+		<main class="flex-container column">
+			<div class="row">
+				<div class="column-4">
+					<nav class="navbar">
+						<ol>
+							<li><a href="public/clase/01_Introduccion/" disabled>01. Introducción (No Disponible)</a></li>
+							<li><a href="public/clase/02_Profundizando-en-HTML/">02. Profundizando en HTML</a></li>
+							<li>
+								<a href="public/clase/03_Profundizando-en-CSS/">03. Profundizando en CSS</a>
+								<ol>
+									<li><a href="public/clase/03.02_Flexbox/">03.02 Layouts con Flexbox</a></li>
+								</ol>
+							</li>
+							<li><a href="public/clase/04_Imagenes_para_la_web/">04 Imagenes para la web</a></li>
+							<li>
+								<a href="public/clase/05_Contenido_multimedia/">05 Contenido multimedia en la web</a>
+								<ol>
+									<li><a href="public/clase/05.02_CSS3_extendido/">05.02 CSS3 Extendido</a></li>
+								</ol>
+							</li>
+							<li><a href="public/clase/06_Diseno_responsivo/">06 Diseño web responsivo</a></li>
+						</ol>
+						<hr />
+						<ol>
+							<li><a href="public/clase/00_proyecto/">Proyecto Integrador (2018)</a></li>
+						</ol>
+					</nav>
+				</div>
+				<div id="app" class="column-8">
+					<p>En el siguiente boton, podrán descargar una estructura básica para comenzar a desarrollar</p>
+					<h3>Estructura</h3>
+					<pre class="prettyprint"><code class="language-html">- /
+- css/
++-- style.css
+- index.html
+</code></pre>
+					<a href="public/practica.rar" class="button" download>Descargar Template</a>
+				</div>
+			</div>
+		</main>
 
-<body>
-    <h1>Fundamentos del Diseño Web
-        <small>2018</small>
-    </h1>
-    <hr>
-    <main class="flex-container column">
-        <div class="row">
-            <div class="column-4">
-                <nav class="navbar">
-                    <ol>
-                        <li>
-                            <a href="public/clase/01_Introduccion/" disabled>01. Introducción (No
-                                Disponible)</a>
-                        </li>
-                        <li>
-                            <a href="public/clase/02_Profundizando-en-HTML/">02. Profundizando en
-                                HTML</a>
-                        </li>
-                        <li>
-                            <a href="public/clase/03_Profundizando-en-CSS/">03. Profundizando en
-                                CSS</a>
-                            <ol>
-                                <li>
-                                    <a href="public/clase/03.02_Flexbox/">03.02 Layouts con Flexbox</a>
-                                </li>
-                            </ol>
-                        </li>
-                        <li><a href="public/clase/04_Imagenes_para_la_web/">04 Imagenes para la web</a></li>
-                        <li>
-                            <a href="public/clase/05_Contenido_multimedia/">05 Contenido multimedia
-                                en la web</a>
-                            <ol>
-                                <li>
-                                    <a href="public/clase/05.02_CSS3_extendido/">05.02 CSS3
-                                        Extendido</a>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
-                    <hr />
-                    <ol>
-                        <li>
-                            <a href="public/clase/00_proyecto/">Proyecto Integrador (2018)</a>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-            <div id="app" class="column-8">
-
-            </div>
-        </div>
-    </main>
-
-</body>
-
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+		<script src="public/js/app.js"></script>
+	</body>
 </html>

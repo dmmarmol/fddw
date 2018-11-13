@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Codificación UTF-8 -->
+		<meta charset="UTF-8" />
+		<!-- Hoja de estilos -->
+		<link href="../../css/style.css" rel="stylesheet" />
+		<link href="../../css/prettyprint.theme.css" rel="stylesheet" />
+		<link href="../../css/grid.css" rel="stylesheet" />
+		<link href="css/styles_class_06.css" rel="stylesheet" />
+
+		<title>Clase 06 - Imagenes Responsivas</title>
+	</head>
+
+	<body>
+		<div class="caja">
+			<a href="index.html">&lt; Volver</a>
+			<h1>Clase 06 - Imagenes Responsivas</h1>
+		</div>
+
+		<div class="caja">
+			<!-- responsive images -->
+            <div class="flex-container row">
+                <div class="column-12">
+                    <h2>Imagenes responsivas con <code>&lt;img srset=""&gt;</code></h2>
+                    <p>
+                        A diferencia de los elementos generados en HTML, los archivos de imagenes ya trae un número definido de
+                        pixeles de ancho y un número definido de pixeles de alto que pueden resultar demasiado grandes o pequeños
+                        para el dispositivo en el que se esta visualizando. Esto puede traer ciertas complicaciones ya que en un
+                        dispositivo muy grande, como un televisor, una imagen pensanda para visualizarse en una computadora puede
+                        quedar muy pequeña y más aún si nuestro CSS le ha fijado la propiedad <code>width: 100%</code>, por
+                        ejemplo.
+                    </p>
+                    <p>
+                        Lo mismo puede suceder en casos donde querramos mostrar una imagen al 100% de ancho en una computadora y
+                        dicha imagen termine siendo innecesariamente pesada para visualizarse en un dispositivo movil, generando
+                        así un consumo de datos excesivo al momento de descargar dicha imagen
+                    </p>
+
+                    <h3>¿Cómo crear imágenes adaptables?</h3>
+                    <p>
+                        Para tener control frente a que archivo de imagen deberá presentar el navegador frente al usuario, usaremos el atributo <code>srset</code> para la ya conocida etiqueta <code>&lt;img&gt;</code>
+                    </p>
+                    
+                    <p data-height="300" data-theme-id="dark" data-slug-hash="WYoYXX" data-default-tab="html" data-user="dmmarmol" data-pen-title="HTML5 <img srcset /> example" class="codepen">See the Pen <a href="https://codepen.io/dmmarmol/pen/WYoYXX/">HTML5 &lt;img srcset /&rt; example</a> by Diego Martín Mármol (<a href="https://codepen.io/dmmarmol">@dmmarmol</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+
+                    <a href="https://codepen.io/dmmarmol/full/WYoYXX/" class="docs" target="_blank">Ver ejemplo en pantalla completa</a>
+
+                    <hr>  
+
+                    <a
+                        href="https://developer.mozilla.org/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+                        class="docs"
+                        target="_blank"
+                        >Ver Documentacion</a
+                    >
+                </div>
+            </div>        
+		</div>
+
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/lang-css.js"></script>
+		<script src="../../js/app.js"></script>
+	</body>
+</html>
+
